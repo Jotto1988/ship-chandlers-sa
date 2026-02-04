@@ -1,1 +1,10 @@
-
+{
+  "name": "ship-chandlers-sa",
+  "version": "1.0.0",
+  "description": "Ship Chandlers South Africa Web Portal",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
