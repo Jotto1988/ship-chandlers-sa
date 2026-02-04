@@ -1,6 +1,5 @@
 /* Global Reset & Sea Salt Tint */
 * {
-    cursor: none !important; /* Hides default for custom anchor cursor */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,61 +7,81 @@
 
 body {
     font-family: 'Lexend', sans-serif;
-    background-color: #fcfaf7; /* Off-white tint for eye comfort */
-    color: #0f172a; /* Navy Text from Logo */
+    background-color: #fcfaf7; /* Eye-friendly tint */
+    color: #0f172a;
+    line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* ⚓ The Reactive Gold Ring Cursor */
-#cursor {
-    position: fixed;
-    width: 18px;
-    height: 18px;
-    background: #d4af37; /* Brand Gold */
-    border: 2px solid #0f172a; 
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 10000;
-    transform: translate(-50%, -50%);
-    transition: width 0.2s, height 0.2s, background 0.2s, border-width 0.2s;
+/* Navigation */
+.nav-container { 
+    background: white; 
+    border-bottom: 3px solid #d4af37; 
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    z-index: 1000; 
 }
 
-/* 🧶 The White Ship Rope Navigation */
-.rope-nav {
-    background: #ffffff;
-    border-bottom: 12px solid #e5e1da;
-    position: relative;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+.nav-link { 
+    color: #0f172a; 
+    text-decoration: none; 
+    font-weight: 600; 
+    font-size: 13px; 
+    text-transform: uppercase; 
+    letter-spacing: 1px;
 }
 
-.rope-end {
-    position: absolute;
-    bottom: -45px;
-    left: 45px;
-    width: 14px;
-    height: 60px;
-    background: #e5e1da; 
-    border-radius: 0 0 10px 10px;
-    transform-origin: top center;
-    animation: sway 5s ease-in-out infinite;
-    z-index: 40;
+.nav-link:hover { color: #d4af37; }
+
+.btn-quote { 
+    background: #0f172a; 
+    color: white !important; 
+    padding: 12px 24px; 
+    border-radius: 4px; 
+    text-decoration: none; 
+    font-weight: bold;
 }
 
-@keyframes sway {
-    0%, 100% { transform: rotate(-4deg); }
-    50% { transform: rotate(4deg); }
+/* Cards & Sections */
+.info-card { 
+    background: white; 
+    border: 1px solid #e2e8f0; 
+    border-top: 5px solid #d4af37; 
+    padding: 30px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+    height: 100%;
 }
 
-.info-card {
-    background: #ffffff;
-    border: 1px solid #e5e1da;
-    border-top: 4px solid #d4af37;
-    border-radius: 0.75rem;
-    padding: 2.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.section-title { 
+    color: #0f172a; 
+    margin-bottom: 25px; 
+    font-size: 32px; 
+    border-left: 6px solid #d4af37; 
+    padding-left: 20px; 
+    font-weight: 800;
 }
 
-.info-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+/* Hero Section */
+.hero-bg { 
+    background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://get.pxhere.com/photo/sea-coast-ocean-dock-sky-ship-transport-vessel-vehicle-port-industry-freight-cargo-ship-waterway-infrastructure-cargo-commercial-cranes-shipping-vessel-logistics-container-terminal-freight-transport-557146.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    height: 70vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    color: white; 
+}
+
+footer {
+    background: #0f172a;
+    color: #94a3b8;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
