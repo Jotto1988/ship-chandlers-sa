@@ -1,1 +1,29 @@
+<section class="max-w-4xl mx-auto py-20 px-6">
+    <div class="glass-card p-10 rounded-3xl">
+        <h2 class="text-3xl font-bold mb-2">Get a Quote</h2>
+        <p class="text-slate-600 mb-8">We know getting it right first time and on time is critical. Enquire below.</p>
+        
+        <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <input type="text" placeholder="Vessel Name" class="p-4 border border-slate-200 rounded-xl bg-slate-50 focus:ring-2 focus:ring-blue-500 transition outline-none">
+            <input type="text" placeholder="IMO Number" class="p-4 border border-slate-200 rounded-xl bg-slate-50 focus:ring-2 focus:ring-blue-500 transition outline-none">
+            
+            <input type="text" onfocus="(this.type='datetime-local')" placeholder="ETA Cape Town Harbour" class="p-4 border border-slate-200 rounded-xl bg-slate-50 focus:ring-2 focus:ring-blue-500 transition outline-none">
+            <select class="p-4 border border-slate-200 rounded-xl bg-slate-50 focus:ring-2 focus:ring-blue-500 transition outline-none">
+                <option value="">Primary Requirement...</option>
+                <option value="provisions">Provisions (Food/Beverage)</option>
+                <option value="technical">Technical (Engine/Deck/Electrical)</option>
+                <option value="safety">Safety Gear</option>
+                <option value="other">Ancillary Services</option>
+            </select>
 
+            <textarea placeholder="Specific Requirements / List of Provisions" class="md:col-span-2 p-4 border border-slate-200 rounded-xl bg-slate-50 h-32 focus:ring-2 focus:ring-blue-500 transition outline-none"></textarea>
+            
+            <div class="md:col-span-2">
+                <label class="block text-sm font-semibold text-slate-500 mb-2">Upload Provision List / Manifest</label>
+                <input type="file" class="w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 transition">
+            </div>
+
+            <button type="submit" class="md:col-span-2 bg-blue-700 text-white py-4 rounded-full font-bold text-lg shine uppercase tracking-widest">Request Re-Supply</button>
+        </form>
+    </div>
+</section>
