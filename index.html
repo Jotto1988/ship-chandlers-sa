@@ -3,63 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ship Chandlers South Africa | Cape Town Harbour</title>
+    <title>Home | Ship Chandlers South Africa</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="cursor"></div>
-    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md px-8 py-4 flex justify-between items-center rope-nav">
-        <div class="flex items-center gap-4 relative">
-            <img src="images/logo.jpg" alt="Logo" class="h-16 z-50">
-            <div class="rope-end"></div>
-            <div class="flex flex-col">
-                <span class="text-lg font-bold uppercase leading-none">Ship Chandlers <span class="text-[#d4af37]">SA</span></span>
-                <span class="text-[10px] uppercase tracking-widest text-[#d4af37] font-semibold">Your Trusted Partner at Sea</span>
-            </div>
+    <nav class="nav-container px-10 py-5 flex justify-between items-center">
+        <div class="flex items-center gap-4">
+            <img src="images/logo.jpg" alt="Logo" class="h-16">
         </div>
-        <div class="hidden lg:flex items-center gap-10 text-xs uppercase tracking-widest font-medium text-slate-600">
-            <a href="index.html" class="text-[#d4af37] border-b-2 border-[#d4af37] pb-1">Home</a>
-            <a href="provisions.html">Provisions</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html" class="bg-[#0f172a] text-white px-6 py-2 rounded shadow-lg transition hover:bg-slate-800">Get a Quote</a>
+        <div class="hidden md:flex items-center gap-8">
+            <a href="index.html" class="nav-link" style="color:#d4af37">Home</a>
+            <a href="provisions.html" class="nav-link">Provisions</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="contact.html" class="btn-quote">GET A QUOTE</a>
         </div>
     </nav>
 
-    <header class="relative h-[85vh] flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-slate-900/40 mix-blend-multiply z-10"></div> 
-            <img src="https://get.pxhere.com/photo/sea-coast-ocean-dock-sky-ship-transport-vessel-vehicle-port-industry-freight-cargo-ship-waterway-infrastructure-cargo-commercial-cranes-shipping-vessel-logistics-container-terminal-freight-transport-557146.jpg" 
-                 class="w-full h-full object-cover grayscale-[15%]" alt="Cape Town Harbour Industrial">
-        </div>
-        <div class="relative z-20 text-center px-8">
-            <h1 class="text-5xl md:text-7xl font-extrabold text-white drop-shadow-2xl mb-6">Seamless <span class="text-[#d4af37]">Chandling</span></h1>
-            <p class="text-white text-lg md:text-xl font-medium tracking-wide uppercase drop-shadow-md">Reliability at every step in Cape Town Harbour</p>
+    <header class="hero-bg">
+        <div class="max-w-4xl px-6">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 uppercase tracking-tight">Your Trusted Partner for Seamless Ship Chandling</h1>
+            <p class="text-xl md:text-2xl font-light text-slate-200">Reliability at Every Step in Cape Town Harbour</p>
         </div>
     </header>
 
-    <section class="py-24 px-8 max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
-        <div class="info-card">
-            <h4 class="text-[#d4af37] font-bold mb-3 uppercase text-xs tracking-widest">Expert Solutions</h4>
-            <p class="text-sm text-slate-600 leading-relaxed">Leveraging extensive expertise and knowledge to exceed maritime expectations.</p>
+    <section class="max-w-7xl mx-auto py-24 px-8">
+        <div class="grid lg:grid-cols-2 gap-16 mb-20">
+            <div>
+                <h2 class="section-title uppercase">Welcome</h2>
+                <p class="text-lg text-slate-700 leading-relaxed mb-6">Welcome to Ship Chandlers South Africa, your premier partner for reliable and efficient maritime supply services directly from the bustling Cape Town Harbour. We are committed to making ship chandling smoother, quicker, and consistently reliable for every vessel that calls upon the Mother City. We understand that getting it right first time and on time is critical to your operations.</p>
+            </div>
+            <div class="bg-white p-10 border-l-8 border-[#d4af37] shadow-sm">
+                <h3 class="text-2xl font-bold mb-4 uppercase">Why Choose Us?</h3>
+                <p class="italic text-slate-600">"Our focus isn't on being the largest, but on being the most reliable name you can count on both at sea and in port."</p>
+            </div>
         </div>
-        <div class="info-card">
-            <h4 class="text-[#d4af37] font-bold mb-3 uppercase text-xs tracking-widest">Unbeatable Value</h4>
-            <p class="text-sm text-slate-600 leading-relaxed">Providing competitive rates without compromising on product quality.</p>
-        </div>
-        <div class="info-card">
-            <h4 class="text-[#d4af37] font-bold mb-3 uppercase text-xs tracking-widest">Safety Guaranteed</h4>
-            <p class="text-sm text-slate-600 leading-relaxed">Each package is secure, protected, and handled with the utmost care.</p>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="info-card">
+                <h4 class="font-bold text-[#d4af37] mb-4 uppercase tracking-widest text-sm">Expert Solutions</h4>
+                <p class="text-slate-600 text-sm">Leveraging our extensive expertise and knowledge, we offer excellent solutions that consistently exceed expectations.</p>
+            </div>
+            <div class="info-card">
+                <h4 class="font-bold text-[#d4af37] mb-4 uppercase tracking-widest text-sm">Unbeatable Value</h4>
+                <p class="text-slate-600 text-sm">We provide competitive rates without compromising on the quality of our products.</p>
+            </div>
+            <div class="info-card">
+                <h4 class="font-bold text-[#d4af37] mb-4 uppercase tracking-widest text-sm">Safety Guaranteed</h4>
+                <p class="text-slate-600 text-sm">Each package we deliver is secure, protected, and handled with the utmost care.</p>
+            </div>
         </div>
     </section>
 
-    <footer class="py-12 bg-white border-t border-slate-200">
-        <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center text-slate-400 text-[10px] uppercase tracking-widest">
-            <p>© 2026 Ship Chandlers South Africa | Cape Town Harbour</p>
-            <a href="https://forgevertical.com" target="_blank" class="hover:text-[#d4af37] transition font-bold">Built by Forgevertical.com</a>
-        </div>
+    <footer>
+        <p>© 2026 Ship Chandlers South Africa | Built by <a href="https://forgevertical.com" class="text-white underline">forgevertical.com</a></p>
     </footer>
-    <script src="index.js"></script>
 </body>
 </html>
