@@ -1,29 +1,53 @@
-<section class="max-w-4xl mx-auto py-20 px-6">
-    <div class="glass-card p-10 rounded-3xl">
-        <h2 class="text-3xl font-bold mb-2">Get a Quote</h2>
-        <p class="text-slate-600 mb-8">We know getting it right first time and on time is critical. Enquire below.</p>
-        
-        <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <input type="text" placeholder="Vessel Name" class="p-4 border border-slate-200 rounded-xl bg-slate-50 focus:ring-2 focus:ring-blue-500 transition outline-none">
-            <input type="text" placeholder="IMO Number" class="p-4 border border-slate-200 rounded-xl bg-slate-50 focus:ring-2 focus:ring-blue-500 transition outline-none">
-            
-            <input type="text" onfocus="(this.type='datetime-local')" placeholder="ETA Cape Town Harbour" class="p-4 border border-slate-200 rounded-xl bg-slate-50 focus:ring-2 focus:ring-blue-500 transition outline-none">
-            <select class="p-4 border border-slate-200 rounded-xl bg-slate-50 focus:ring-2 focus:ring-blue-500 transition outline-none">
-                <option value="">Primary Requirement...</option>
-                <option value="provisions">Provisions (Food/Beverage)</option>
-                <option value="technical">Technical (Engine/Deck/Electrical)</option>
-                <option value="safety">Safety Gear</option>
-                <option value="other">Ancillary Services</option>
-            </select>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Ship Chandlers South Africa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50">
+    <nav class="flex justify-between items-center px-10 py-6 bg-white shadow-sm">
+        <img src="images/logo.jpg" alt="Logo" class="h-12">
+        <div class="space-x-8 font-medium">
+            <a href="index.html">Home</a>
+            <a href="provisions.html">Provisions</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html" class="text-blue-700">Contact Us</a>
+        </div>
+    </nav>
 
-            <textarea placeholder="Specific Requirements / List of Provisions" class="md:col-span-2 p-4 border border-slate-200 rounded-xl bg-slate-50 h-32 focus:ring-2 focus:ring-blue-500 transition outline-none"></textarea>
+    <section class="py-20 px-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
+        <div>
+            <h1 class="text-4xl font-bold mb-6">Get in Touch [cite: 41]</h1>
+            <p class="text-slate-600 mb-10">We are ready to make your re-supply in Cape Town a seamless experience[cite: 42].</p>
             
-            <div class="md:col-span-2">
-                <label class="block text-sm font-semibold text-slate-500 mb-2">Upload Provision List / Manifest</label>
-                <input type="file" class="w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 transition">
+            <div class="space-y-6">
+                <div>
+                    <h3 class="font-bold text-blue-900">Cape Town Office [cite: 44]</h3>
+                    <p class="text-slate-600">6 Stella Rd, Montague Gardens, 7441 [cite: 45]</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-blue-900">Phone & WhatsApp [cite: 46, 47]</h3>
+                    <p class="text-slate-600">Office: +27 21 213-4786 [cite: 46]</p>
+                    <p class="text-slate-600">After-Hours: +27 67 659 2296 [cite: 47]</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-blue-900">Email [cite: 48]</h3>
+                    <p class="text-slate-600">capetown@shipchandlers.co.za [cite: 48]</p>
+                </div>
             </div>
+        </div>
 
-            <button type="submit" class="md:col-span-2 bg-blue-700 text-white py-4 rounded-full font-bold text-lg shine uppercase tracking-widest">Request Re-Supply</button>
-        </form>
-    </div>
-</section>
+        <div class="bg-white p-10 rounded-3xl shadow-xl">
+            <h2 class="text-2xl font-bold mb-6">Get a Quote [cite: 50]</h2>
+            <form class="space-y-4">
+                <input type="text" placeholder="Vessel Name" class="w-full p-4 border rounded-xl bg-slate-50 outline-none focus:ring-2 focus:ring-blue-500 transition">
+                <input type="email" placeholder="Email Address" class="w-full p-4 border rounded-xl bg-slate-50 outline-none focus:ring-2 focus:ring-blue-500 transition">
+                <textarea placeholder="How can we assist you?" class="w-full p-4 border rounded-xl bg-slate-50 h-32 outline-none focus:ring-2 focus:ring-blue-500 transition"></textarea>
+                <button class="w-full bg-blue-900 text-white py-4 rounded-xl font-bold shine uppercase tracking-widest">Send Enquiry</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
