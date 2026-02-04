@@ -1,0 +1,68 @@
+/* Global Reset & Sea Salt Tint */
+* {
+    cursor: none !important; /* Hides default for custom anchor cursor */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lexend', sans-serif;
+    background-color: #fcfaf7; /* Off-white tint for eye comfort */
+    color: #0f172a; /* Navy Text from Logo */
+    overflow-x: hidden;
+}
+
+/* ⚓ The Reactive Gold Ring Cursor */
+#cursor {
+    position: fixed;
+    width: 18px;
+    height: 18px;
+    background: #d4af37; /* Brand Gold */
+    border: 2px solid #0f172a; 
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s, background 0.2s, border-width 0.2s;
+}
+
+/* 🧶 The White Ship Rope Navigation */
+.rope-nav {
+    background: #ffffff;
+    border-bottom: 12px solid #e5e1da;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.rope-end {
+    position: absolute;
+    bottom: -45px;
+    left: 45px;
+    width: 14px;
+    height: 60px;
+    background: #e5e1da; 
+    border-radius: 0 0 10px 10px;
+    transform-origin: top center;
+    animation: sway 5s ease-in-out infinite;
+    z-index: 40;
+}
+
+@keyframes sway {
+    0%, 100% { transform: rotate(-4deg); }
+    50% { transform: rotate(4deg); }
+}
+
+.info-card {
+    background: #ffffff;
+    border: 1px solid #e5e1da;
+    border-top: 4px solid #d4af37;
+    border-radius: 0.75rem;
+    padding: 2.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
