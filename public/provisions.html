@@ -3,55 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Provisions | Ship Chandlers South Africa</title>
+    <title>Provisions & Supplies | Ship Chandlers South Africa</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Lexend', sans-serif; }
+        .category-card { transition: transform 0.3s ease, border-color 0.3s ease; }
+        .category-card:hover { transform: translateY(-5px); border-color: #1e3a8a; }
+    </style>
 </head>
-<body class="bg-slate-50">
-    <nav class="flex justify-between items-center px-10 py-6 bg-white shadow-sm">
-        <img src="images/logo.jpg" alt="Logo" class="h-12">
+<body class="bg-slate-50 text-slate-900">
+
+    <nav class="flex justify-between items-center px-10 py-6 bg-white shadow-sm sticky top-0 z-50">
+        <img src="images/logo.jpg" alt="Ship Chandlers SA Logo" class="h-12">
         <div class="space-x-8 font-medium">
-            <a href="index.html">Home</a>
+            <a href="index.html" class="hover:text-blue-600 transition text-slate-600">Home</a>
             <a href="provisions.html" class="text-blue-700">Provisions</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html" class="bg-blue-900 text-white px-6 py-2 rounded-full">Get a Quote</a>
+            <a href="about.html" class="hover:text-blue-600 transition text-slate-600">About Us</a>
+            <a href="contact.html" class="bg-blue-900 text-white px-6 py-2 rounded-full transition hover:bg-blue-800">Get a Quote</a>
         </div>
     </nav>
 
-    <section class="py-20 px-10 max-w-7xl mx-auto">
-        <h1 class="text-4xl font-bold mb-4">Comprehensive Provisions & Supplies [cite: 21]</h1>
-        <p class="text-slate-600 mb-12 max-w-3xl">Expert matching of product specifications for every vessel docking in Cape Town Harbour[cite: 22, 23].</p>
-        
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="p-6 bg-white rounded-xl border border-slate-200">
-                <h3 class="font-bold text-blue-800 mb-2">Food & Beverage [cite: 25]</h3>
-                <p class="text-sm text-slate-600">Fresh and dry provisions, including frozen and chilled items[cite: 25].</p>
+    <header class="bg-blue-900 py-16 px-10 text-white">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-4xl font-bold mb-4">Comprehensive Provisions & Supplies</h1>
+            <p class="text-blue-100 max-w-2xl text-lg">Catering to the diverse needs of vessels docking in Cape Town Harbour with expert specification matching. [cite: 21, 22, 23]</p>
+        </div>
+    </header>
+
+    <section class="max-w-7xl mx-auto py-20 px-10">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="category-card p-8 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                <div class="text-3xl mb-4">🍎</div>
+                <h3 class="text-xl font-bold mb-3 text-blue-900">Food & Beverage</h3>
+                <p class="text-slate-600 text-sm">Full spectrum of fresh and dry provisions, including frozen and chilled items. [cite: 25]</p>
             </div>
-            <div class="p-6 bg-white rounded-xl border border-slate-200">
-                <h3 class="font-bold text-blue-800 mb-2">Technical & Engine [cite: 33]</h3>
-                <p class="text-sm text-slate-600">Full range of parts, tools, oils, grease, and lubricants[cite: 33].</p>
+
+            <div class="category-card p-8 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                <div class="text-3xl mb-4">⚙️</div>
+                <h3 class="text-xl font-bold mb-3 text-blue-900">Engine Room Supplies</h3>
+                <p class="text-slate-600 text-sm">Tools, parts, cleaning products, oils, grease, lubricants, and hoses. [cite: 33]</p>
             </div>
-            <div class="p-6 bg-white rounded-xl border border-slate-200">
-                <h3 class="font-bold text-blue-800 mb-2">Safety Gear [cite: 29]</h3>
-                <p class="text-sm text-slate-600">Lifeboat equipment, firefighting gear, and crew protection[cite: 29].</p>
+
+            <div class="category-card p-8 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                <div class="text-3xl mb-4">🔌</div>
+                <h3 class="text-xl font-bold mb-3 text-blue-900">Electrical Supplies</h3>
+                <p class="text-slate-600 text-sm">Pneumatic and power tools, electronic equipment (220V/110V), and hardware. [cite: 32]</p>
             </div>
-            <div class="p-6 bg-white rounded-xl border border-slate-200">
-                <h3 class="font-bold text-blue-800 mb-2">Deck Equipment [cite: 31]</h3>
-                <p class="text-sm text-slate-600">General deck gear, ropes, rigging, and lifting equipment[cite: 31].</p>
+
+            <div class="category-card p-8 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                <div class="text-3xl mb-4">🦺</div>
+                <h3 class="text-xl font-bold mb-3 text-blue-900">Safety Gear</h3>
+                <p class="text-slate-600 text-sm">Lifeboat and firefighting gear, fall arrest equipment, and personal crew protection. [cite: 29]</p>
             </div>
-            <div class="p-6 bg-white rounded-xl border border-slate-200">
-                <h3 class="font-bold text-blue-800 mb-2">Medical & Office [cite: 26, 28]</h3>
-                <p class="text-sm text-slate-600">Specialist medical supplies and full office stationery/tech[cite: 26, 28].</p>
+
+            <div class="category-card p-8 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                <div class="text-3xl mb-4">⚓</div>
+                <h3 class="text-xl font-bold mb-3 text-blue-900">Deck & Cabin</h3>
+                <p class="text-slate-600 text-sm">Ropes, rigging, lifting equipment, maintenance essentials, and kitchenware. [cite: 30, 31]</p>
             </div>
-            <div class="p-6 bg-white rounded-xl border border-slate-200 bg-blue-50">
-                <h3 class="font-bold text-blue-900 mb-2">Ancillary Services [cite: 34]</h3>
-                <ul class="text-sm text-slate-700 space-y-1">
-                    <li>• Global SIM Cards (171 countries) [cite: 35]</li>
-                    <li>• Bunkering Liaison [cite: 36]</li>
-                    <li>• High-volume Waste Removal [cite: 37]</li>
-                </ul>
+
+            <div class="category-card p-8 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                <div class="text-3xl mb-4">📂</div>
+                <h3 class="text-xl font-bold mb-3 text-blue-900">Office & Medical</h3>
+                <p class="text-slate-600 text-sm">Stationery, tech hardware, and specialist prescription/non-prescription medical supplies. [cite: 26, 28]</p>
+            </div>
+
+        </div>
+
+        <div class="mt-20">
+            <h2 class="text-3xl font-bold mb-10 border-b border-slate-200 pb-4">Additional Maritime Services</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="space-y-2">
+                    <h4 class="font-bold text-blue-800 uppercase text-xs tracking-widest">Crew Connectivity [cite: 35]</h4>
+                    <p class="text-slate-600 text-sm">Global SIM cards for internet, calls, and SMS in 171 countries worldwide. [cite: 35]</p>
+                </div>
+                <div class="space-y-2">
+                    <h4 class="font-bold text-blue-800 uppercase text-xs tracking-widest">Bunkering [cite: 36]</h4>
+                    <p class="text-slate-600 text-sm">Liaison for water and oil-bunkering service providers within the Harbour. [cite: 36]</p>
+                </div>
+                <div class="space-y-2">
+                    <h4 class="font-bold text-blue-800 uppercase text-xs tracking-widest">Waste Logistics [cite: 37]</h4>
+                    <p class="text-slate-600 text-sm">High-volume waste removal services with skips delivered directly to the vessel. [cite: 37]</p>
+                </div>
             </div>
         </div>
     </section>
+
+    <footer class="bg-slate-900 text-white py-12 px-10 text-center">
+        <p class="text-slate-400 text-sm">© 2026 Ship Chandlers South Africa. Your dedicated chandler in Cape Town. [cite: 19]</p>
+    </footer>
+
 </body>
 </html>
