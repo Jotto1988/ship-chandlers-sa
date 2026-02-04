@@ -5,62 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Provisions | Ship Chandlers South Africa</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="selection:bg-gold-accent selection:text-slate-900 pt-32">
+<body class="pt-32">
     <div id="cursor"></div>
-
-    <nav class="fixed top-0 w-full z-50 glass-nav px-8 py-5 flex justify-between items-center">
-        <div class="flex items-center gap-4">
-            <img src="images/logo.jpg" alt="Logo" class="h-12">
-            <div class="flex flex-col">
-                <span class="text-lg font-bold tracking-tight uppercase leading-none">Ship Chandlers <span class="text-gold-accent">SA</span></span>
-                <span class="text-[10px] uppercase tracking-[0.2em] text-gold-accent">Your Trusted Partner at Sea</span>
-            </div>
+    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md px-8 py-4 flex justify-between items-center rope-nav">
+        <div class="flex items-center gap-4 relative">
+            <img src="images/logo.jpg" alt="Logo" class="h-16 z-50">
+            <div class="rope-end"></div>
+            <div class="flex flex-col"><span class="text-lg font-bold uppercase">Ship Chandlers <span class="text-[#d4af37]">SA</span></span></div>
         </div>
-        <div class="hidden lg:flex items-center gap-10 font-medium text-xs uppercase tracking-widest">
-            <a href="index.html" class="hover:text-gold-accent transition">Home</a>
-            <a href="provisions.html" class="text-gold-accent">Provisions</a>
-            <a href="about.html" class="text-slate-300 hover:text-gold-accent transition">About Us</a>
-            <a href="contact.html" class="bg-blue-700 text-white px-8 py-3 rounded shadow-2xl shine">Get a Quote</a>
+        <div class="hidden lg:flex items-center gap-10 text-xs uppercase tracking-widest font-medium">
+            <a href="index.html">Home</a>
+            <a href="provisions.html" class="text-[#d4af37] border-b-2 border-[#d4af37]">Provisions</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html" class="bg-[#0f172a] text-white px-6 py-2 rounded">Get a Quote</a>
         </div>
     </nav>
-
-    <div class="max-w-7xl mx-auto px-8 py-20">
-        <h1 class="text-4xl font-bold mb-4">Comprehensive Provisions & Supplies [cite: 21]</h1>
-        <p class="text-slate-400 max-w-2xl mb-16">Catering to the diverse needs of vessels docking in Cape Town Harbour with expert specification matching[cite: 22, 23].</p>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="p-8 rounded-2xl bg-slate-900/50 border border-white/5">
-                <h4 class="text-gold-accent font-bold mb-3 uppercase text-xs tracking-widest">Food & Beverage [cite: 25]</h4>
-                <p class="text-sm text-slate-400">Fresh and dry provisions, including frozen and chilled items[cite: 25].</p>
-            </div>
-            <div class="p-8 rounded-2xl bg-slate-900/50 border border-white/5">
-                <h4 class="text-gold-accent font-bold mb-3 uppercase text-xs tracking-widest">Engine Room [cite: 33]</h4>
-                <p class="text-sm text-slate-400">Tools, parts, cleaning products, oils, grease, lubricants, and hoses[cite: 33].</p>
-            </div>
-            <div class="p-8 rounded-2xl bg-slate-900/50 border border-white/5">
-                <h4 class="text-gold-accent font-bold mb-3 uppercase text-xs tracking-widest">Safety Gear [cite: 29]</h4>
-                <p class="text-sm text-slate-400">Lifeboat equipment, firefighting gear, and crew protection[cite: 29].</p>
-            </div>
-            <div class="p-8 rounded-2xl bg-slate-900/50 border border-white/5">
-                <h4 class="text-gold-accent font-bold mb-3 uppercase text-xs tracking-widest">Electrical [cite: 32]</h4>
-                <p class="text-sm text-slate-400">Power tools and electronic equipment available in 220V and 110V[cite: 32].</p>
-            </div>
-            <div class="p-8 rounded-2xl bg-slate-900/50 border border-white/5">
-                <h4 class="text-gold-accent font-bold mb-3 uppercase text-xs tracking-widest">Additional Services [cite: 34]</h4>
-                <p class="text-sm text-slate-400">Global SIM cards (171 countries), Bunkering Liaison, and Waste Removal[cite: 35, 36, 37].</p>
-            </div>
+    <section class="max-w-7xl mx-auto px-8 py-20">
+        <h1 class="text-4xl font-extrabold mb-12">Supply Catalog</h1>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="info-card"><h4 class="text-[#d4af37] font-bold uppercase text-xs mb-2">Food & Beverage</h4><p class="text-sm text-slate-600">Fresh, dry, frozen and chilled items.</p></div>
+            <div class="info-card"><h4 class="text-[#d4af37] font-bold uppercase text-xs mb-2">Engine Room</h4><p class="text-sm text-slate-600">Tools, parts, lubricants and hoses.</p></div>
+            <div class="info-card"><h4 class="text-[#d4af37] font-bold uppercase text-xs mb-2">Safety Gear</h4><p class="text-sm text-slate-600">Firefighting and crew protection gear.</p></div>
         </div>
-    </div>
-
-    <footer class="py-12 px-8 bg-slate-950 border-t border-white/5">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
-            <p class="text-slate-500 text-[10px] uppercase tracking-widest">© 2026 Ship Chandlers South Africa [cite: 1]</p>
-            <a href="https://forgevertical.com" class="text-slate-700 hover:text-gold-accent transition text-[9px] uppercase tracking-tighter">Built by Forgevertical.com</a>
-        </div>
-    </footer>
+    </section>
     <script src="index.js"></script>
 </body>
 </html>
