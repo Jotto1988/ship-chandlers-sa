@@ -1,14 +1,11 @@
-// public/index.js
-
 document.addEventListener('DOMContentLoaded', () => {
     const cursor = document.getElementById('cursor');
 
     /**
-     * ANCHOR CURSOR LOGIC
-     * Tracks the mouse and applies a smooth transition
+     * REACTIVE CURSOR LOGIC
+     * Tracks the mouse smoothly and handles the gold ring expansion
      */
     document.addEventListener('mousemove', (e) => {
-        // Use requestAnimationFrame for smoother performance on high-refresh screens
         window.requestAnimationFrame(() => {
             cursor.style.left = `${e.clientX}px`;
             cursor.style.top = `${e.clientY}px`;
@@ -17,23 +14,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /**
      * HOVER EFFECTS
-     * Scales the anchor cursor when hovering over interactive elements
+     * Scales the cursor into a gold ring when hovering over interactive elements
      */
-    const interactiveElements = document.querySelectorAll('a, button, .info-card, input, textarea');
+    const hoverables = document.querySelectorAll('a, button, .info-card, input, textarea');
     
-    interactiveElements.forEach(el => {
+    hoverables.forEach(el => {
         el.addEventListener('mouseenter', () => {
-            cursor.style.transform = 'translate(-50%, -50%) scale(1.6)';
-            cursor.style.filter = 'drop-shadow(0 0 5px rgba(212, 175, 55, 0.5))';
+            cursor.style.width = '45px';
+            cursor.style.height = '45px';
+            cursor.style.background = 'transparent';
+            cursor.style.borderColor = '#d4af37';
+            cursor.style.borderWidth = '3px';
         });
         el.addEventListener('mouseleave', () => {
-            cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-            cursor.style.filter = 'none';
+            cursor.style.width = '18px';
+            cursor.style.height = '18px';
+            cursor.style.background = '#d4af37';
+            cursor.style.borderWidth = '2px';
+            cursor.style.borderColor = '#0f172a';
         });
     });
 
     /**
-     * FORM SUBMISSION LOGIC
+     * FORM SUBMISSION LOGIC (Retained from previous version)
      * Handles the "Make an Enquiry" form on the Contact page
      */
     const quoteForm = document.getElementById('quoteForm');
