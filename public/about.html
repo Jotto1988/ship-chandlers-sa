@@ -6,107 +6,45 @@
     <title>About Us | Ship Chandlers South Africa</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Lexend', sans-serif; background-color: #020617; color: #f8fafc; }
-        .bg-navy-luxe { background-color: #0f172a; }
-        .text-gold-accent { color: #d4af37; }
-        .glass-nav { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(212, 175, 55, 0.1); }
-        .glass-card { background: rgba(30, 41, 59, 0.4); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.05); }
-        .gold-line { height: 2px; background: linear-gradient(to right, #d4af37, transparent); width: 100px; margin-bottom: 2rem; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="selection:bg-gold-accent selection:text-navy-luxe">
+<body class="selection:bg-gold-accent selection:text-slate-900 pt-32">
+    <div id="cursor"></div>
 
-    <nav class="fixed top-0 w-full z-50 glass-nav px-6 py-4 flex justify-between items-center">
-        <div class="flex items-center gap-3">
-            <img src="images/logo.jpg" alt="Logo" class="h-10 md:h-12 rounded shadow-lg">
-            <span class="text-xl font-bold tracking-tight uppercase hidden md:block">Ship Chandlers <span class="text-gold-accent">SA</span></span>
+    <nav class="fixed top-0 w-full z-50 glass-nav px-8 py-5 flex justify-between items-center">
+        <div class="flex items-center gap-4">
+            <img src="images/logo.jpg" alt="Logo" class="h-12">
+            <div class="flex flex-col">
+                <span class="text-lg font-bold tracking-tight uppercase leading-none">Ship Chandlers <span class="text-gold-accent">SA</span></span>
+                <span class="text-[10px] uppercase tracking-[0.2em] text-gold-accent">Your Trusted Partner at Sea</span>
+            </div>
         </div>
-        <div class="flex items-center gap-8 font-medium text-sm uppercase tracking-widest text-slate-300">
+        <div class="hidden lg:flex items-center gap-10 font-medium text-xs uppercase tracking-widest">
             <a href="index.html" class="hover:text-gold-accent transition">Home</a>
             <a href="provisions.html" class="hover:text-gold-accent transition">Provisions</a>
             <a href="about.html" class="text-gold-accent">About Us</a>
-            <a href="contact.html" class="bg-blue-700 text-white px-6 py-2 rounded shadow-xl">Get a Quote</a>
+            <a href="contact.html" class="bg-blue-700 text-white px-8 py-3 rounded shadow-2xl shine">Get a Quote</a>
         </div>
     </nav>
 
-    <header class="pt-40 pb-20 px-6 max-w-7xl mx-auto">
-        <h2 class="text-xs font-bold text-gold-accent uppercase tracking-[0.4em] mb-4">Our Story</h2>
-        <h1 class="text-4xl md:text-5xl font-bold leading-tight max-w-4xl">Dedicated to Maritime Excellence in Cape Town</h1>
-    </header>
-
-    <section class="py-12 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-        <div class="space-y-6 text-slate-300 leading-relaxed">
-            <div class="gold-line"></div>
-            <p>Ship Chandlers South Africa is proud to serve the maritime industry from its strategic location in the historic Cape Town Harbour[cite: 57].</p>
-            <p>Since the city's establishment as a vital victualing station in 1652 for ships traversing to and from the Dutch East Indies, the Port of Cape Town has continuously grown and progressed[cite: 58].</p>
-            <p>Today, it is a bustling hub featuring two docks, multi-purpose and fruit terminals, a dry dock, repair quay, an extensive yachting marina, and a tanker basin[cite: 59]. We are honoured to play a crucial role in the ongoing development and success of this industry[cite: 60].</p>
-        </div>
-        <div class="rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-            <img src="images/cape-town-harbour.jpg" alt="Cape Town Harbour Operations" class="w-full h-full object-cover">
+    <section class="max-w-4xl mx-auto px-8 py-20 leading-relaxed text-slate-300">
+        <h1 class="text-4xl font-bold mb-8 text-white">Dedicated to Maritime Excellence [cite: 56]</h1>
+        <p class="mb-6">Ship Chandlers South Africa serves the maritime industry from its strategic location in the historic Cape Town Harbour[cite: 57].</p>
+        <p class="mb-6">Established in 1652 as a vital victualing station, the Port of Cape Town has grown into a bustling hub featuring docks, repair quays, and tanker basins[cite: 58, 59].</p>
+        <p class="mb-12">Established in 1994 (as Express Ship Chandlers), we build on a foundation of expertise to exceed client expectations[cite: 65].</p>
+        
+        <div class="p-10 rounded-3xl bg-blue-900/20 border border-blue-500/20">
+            <h2 class="text-gold-accent font-bold uppercase tracking-widest mb-4">Our Mission [cite: 61]</h2>
+            <p>To make ship chandling smoother, quicker, and more environmentally responsible while protecting the vital waters we depend on[cite: 61, 62].</p>
         </div>
     </section>
 
-    <section class="py-24 bg-navy-luxe">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8">
-            <div class="glass-card p-10 rounded-2xl">
-                <h3 class="text-gold-accent font-bold uppercase tracking-widest mb-4">Our Mission</h3>
-                <p class="text-slate-300">To make ship chandling smoother, quicker, and more environmentally responsible[cite: 61]. We are dedicated to serving every client with care, while also fulfilling our part to protect the vital waters we all depend on[cite: 62].</p>
-            </div>
-            <div class="glass-card p-10 rounded-2xl">
-                <h3 class="text-gold-accent font-bold uppercase tracking-widest mb-4">Our Vision</h3>
-                <p class="text-slate-300">We aspire to help shape a better future for maritime supply, where reliable service and responsible choices are always intertwined[cite: 63]. Our goal is to consistently set a higher standard through unwavering service and honest work[cite: 64].</p>
-            </div>
+    <footer class="py-12 px-8 bg-slate-950 border-t border-white/5">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <p class="text-slate-500 text-[10px] uppercase tracking-widest">© 2026 Ship Chandlers South Africa [cite: 1]</p>
+            <a href="https://forgevertical.com" class="text-slate-700 hover:text-gold-accent transition text-[9px] uppercase tracking-tighter">Built by Forgevertical.com</a>
         </div>
-    </section>
-
-    <section class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="mb-12">
-            <h2 class="text-3xl font-bold mb-4">Commitment to Excellence</h2>
-            <p class="text-slate-400">Ship Chandlers South Africa (established in 1994 as Express Ship Chandlers) is built on a foundation of expertise and knowledge[cite: 65].</p>
-        </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="border-l border-gold/30 pl-6 py-4">
-                <h4 class="font-bold mb-2">Unbeatable Pricing</h4>
-                <p class="text-sm text-slate-500">Providing the best rates without compromising on quality[cite: 67].</p>
-            </div>
-            <div class="border-l border-gold/30 pl-6 py-4">
-                <h4 class="font-bold mb-2">Speed & Accuracy</h4>
-                <p class="text-sm text-slate-500">Ensuring timely deliveries with unparalleled accuracy[cite: 68].</p>
-            </div>
-            <div class="border-l border-gold/30 pl-6 py-4">
-                <h4 class="font-bold mb-2">Modernized Systems</h4>
-                <p class="text-sm text-slate-500">Utilizing modernized in-house ERP to spearhead innovation[cite: 69].</p>
-            </div>
-            <div class="border-l border-gold/30 pl-6 py-4">
-                <h4 class="font-bold mb-2">24/7 Support</h4>
-                <p class="text-sm text-slate-500">Round-the-clock assistance, ready to support you anytime[cite: 71].</p>
-            </div>
-            <div class="border-l border-gold/30 pl-6 py-4">
-                <h4 class="font-bold mb-2">Guaranteed Safety</h4>
-                <p class="text-sm text-slate-500">Each package is secure, protected, and handled with care[cite: 72].</p>
-            </div>
-            <div class="border-l border-gold/30 pl-6 py-4">
-                <h4 class="font-bold mb-2">Dependable Service</h4>
-                <p class="text-sm text-slate-500">Delivering fast, dependable service for seamless experiences[cite: 70].</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 px-6 bg-slate-950/50">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-2xl font-bold mb-8 uppercase tracking-widest text-gold-accent">The Port of Cape Town</h2>
-            <div class="space-y-6 text-slate-400 max-w-5xl">
-                <p>Cape Town handles the nation’s largest volume of fresh fruit, alongside wheat, rice, timber, coal, scrap, and general cargo[cite: 74]. Situated along one of the world's busiest trade routes, it functions as a crucial transhipment logistics and repair base[cite: 75].</p>
-                <p>We are proud to support diverse vessels including Container Vessels, Cruise Liners, Fishing Vessels, Private Yachts, Cargo Vessels, LNG Vessels, Oil Carriers, and Offshore Oil Rigs[cite: 76].</p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-16 px-6 bg-slate-950 border-t border-white/5 text-center">
-        <p class="text-slate-500 text-xs uppercase tracking-widest">© 2026 Ship Chandlers South Africa. Your dedicated chandler in Cape Town[cite: 19].</p>
     </footer>
-
     <script src="index.js"></script>
 </body>
 </html>
