@@ -1,59 +1,76 @@
-/* Global Reset & Tint */
+/* Global Reset & Sea Salt Tint */
 * {
-    cursor: none !important;
+    cursor: none !important; /* Hides default cursor */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Lexend', sans-serif;
-    background-color: #fcfaf7; /* Tinted off-white to prevent glare */
-    color: #0f172a;
+    background-color: #fcfaf7; /* Eye-friendly Sea Salt Tint */
+    color: #0f172a; /* Navy Text from Logo */
     overflow-x: hidden;
 }
 
-/* ⚓ The Refined Cursor */
+/* ⚓ The Reactive Gold Ring Cursor */
 #cursor {
     position: fixed;
     width: 18px;
     height: 18px;
-    background: #d4af37; /* Gold */
-    border: 2px solid #0f172a; /* Navy outline for visibility */
+    background: #d4af37; /* Brand Gold */
+    border: 2px solid #0f172a; /* Navy Outline */
     border-radius: 50%;
     pointer-events: none;
     z-index: 10000;
     transform: translate(-50%, -50%);
-    transition: width 0.2s, height 0.2s;
+    transition: width 0.2s, height 0.2s, background 0.2s, border-radius 0.2s;
 }
 
-/* 🧶 The Ship Rope Navigation */
+/* 🧶 The White Ship Rope Navigation */
 .rope-nav {
     background: #ffffff;
-    border-bottom: 8px solid;
-    border-image: url('images/rope-texture.png') 30 repeat; /* You'll need a small rope tile image */
+    border-bottom: 12px solid;
+    /* This will use the rope texture tile we discussed */
+    border-image: url('images/rope-texture.png') 30 repeat; 
     position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* Subtle Rope Sway Animation */
 .rope-end {
     position: absolute;
-    bottom: -40px;
-    left: 40px;
-    width: 12px;
-    height: 50px;
+    bottom: -45px;
+    left: 45px;
+    width: 14px;
+    height: 60px;
     background: url('images/rope-end.png') no-repeat;
     background-size: contain;
     transform-origin: top center;
-    animation: sway 4s ease-in-out infinite;
+    animation: sway 5s ease-in-out infinite;
+    z-index: 40;
 }
 
 @keyframes sway {
-    0%, 100% { transform: rotate(-3deg); }
-    50% { transform: rotate(3deg); }
+    0%, 100% { transform: rotate(-4deg); }
+    50% { transform: rotate(4deg); }
 }
 
-/* Gold-Tinted Cards */
+/* Professional Light Cards */
 .info-card {
-    background: #fff;
+    background: #ffffff;
     border: 1px solid #e5e1da;
     border-top: 4px solid #d4af37;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border-radius: 0.75rem;
+    padding: 2.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.glass-nav {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
 }
