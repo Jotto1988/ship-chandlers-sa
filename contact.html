@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Ship Chandlers SA</title>
+    <title>Contact | Ship Chandlers SA</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -14,36 +14,44 @@
         <div class="hidden md:flex items-center gap-8">
             <a href="index.html" class="nav-link">Home</a>
             <a href="provisions.html" class="nav-link">Provisions</a>
-            <a href="about.html" class="nav-link" style="color:#d4af37">About Us</a>
-            <a href="contact.html" class="btn-quote">GET A QUOTE</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="contact.html" class="nav-link" style="color:#d4af37">Contact</a>
         </div>
     </nav>
 
-    <section class="max-w-5xl mx-auto py-20 px-8">
-        <h1 class="section-title uppercase">Our Story</h1>
-        <p class="text-lg mb-8 leading-relaxed">Since the city's establishment as a vital victualing station in 1652 for ships traversing to and from the Dutch East Indies, the Port of Cape Town has continuously grown and progressed. Established in 1994 (as Express Ship Chandlers), we are built on a foundation of expertise and knowledge.</p>
-        
-        <div class="grid md:grid-cols-2 gap-10 mb-20">
-            <div class="bg-[#0f172a] text-white p-10 rounded-lg">
-                <h2 class="text-[#d4af37] font-bold uppercase mb-4 tracking-widest">Our Mission</h2>
-                <p class="font-light">To make ship chandling smoother, quicker, and more environmentally responsible while protecting the vital waters we all depend on.</p>
-            </div>
-            <div class="bg-white p-10 border border-slate-200 rounded-lg">
-                <h2 class="text-[#0f172a] font-bold uppercase mb-4 tracking-widest">Our Vision</h2>
-                <p class="text-slate-600">To help shape a better future for maritime supply, where reliable service and responsible choices are always intertwined.</p>
+    <section class="max-w-7xl mx-auto py-20 px-8 grid lg:grid-cols-2 gap-20">
+        <div>
+            <h1 class="section-title uppercase">Get In Touch</h1>
+            <p class="mb-10 text-slate-500 italic">"We are ready to make your re-supply in Cape Town a seamless and fuss-free experience."</p>
+            
+            <div class="space-y-6">
+                <div>
+                    <h4 class="font-bold uppercase text-xs text-[#d4af37] mb-1">Address</h4>
+                    <p>6 Stella Rd, Montague Gardens, Cape Town, 7441</p>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase text-xs text-[#d4af37] mb-1">Phone & WhatsApp</h4>
+                    <p>Office: +27 21 213-4786</p>
+                    <p>24/7 WhatsApp: +27 67 659 2296</p>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase text-xs text-[#d4af37] mb-1">Email</h4>
+                    <p>capetown@shipchandlers.co.za</p>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase text-xs text-[#d4af37] mb-1">Office Hours</h4>
+                    <p>7:00 AM to 5:00 PM</p>
+                </div>
             </div>
         </div>
 
-        <h3 class="text-2xl font-extrabold mb-6 uppercase">Vessels We Support:</h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm font-bold uppercase text-slate-500">
-            <p>• Container Vessels</p>
-            <p>• Cruise Liners</p>
-            <p>• Fishing Vessels</p>
-            <p>• Private Yachts</p>
-            <p>• Cargo Vessels</p>
-            <p>• LNG Vessels</p>
-            <p>• Oil Carriers</p>
-            <p>• Offshore Oil Rigs</p>
+        <div class="info-card">
+            <h3 class="text-xl font-bold mb-6">Enquire Now</h3>
+            <form action="https://formspree.io/f/YOUR_ID" method="POST" class="space-y-4">
+                <input type="text" name="vessel" placeholder="Vessel Name" required class="w-full p-4 border border-slate-200 rounded outline-none focus:border-[#d4af37]">
+                <textarea name="requirements" placeholder="Supply Requirements" required class="w-full p-4 border border-slate-200 rounded h-32 outline-none focus:border-[#d4af37]"></textarea>
+                <button type="submit" class="w-full bg-[#0f172a] text-white py-4 font-bold uppercase tracking-widest hover:bg-slate-800 transition">Send Enquiry</button>
+            </form>
         </div>
     </section>
 </body>
