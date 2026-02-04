@@ -1,6 +1,6 @@
 /* Global Reset & Sea Salt Tint */
 * {
-    cursor: none !important; /* Hides default cursor */
+    cursor: none !important;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,25 +13,25 @@ body {
     overflow-x: hidden;
 }
 
-/* ⚓ The Reactive Gold Ring Cursor */
+/* ⚓ Reactive Gold Ring Cursor */
 #cursor {
     position: fixed;
     width: 18px;
     height: 18px;
     background: #d4af37; /* Brand Gold */
-    border: 2px solid #0f172a; /* Navy Outline */
+    border: 2px solid #0f172a; 
     border-radius: 50%;
     pointer-events: none;
     z-index: 10000;
     transform: translate(-50%, -50%);
-    transition: width 0.2s, height 0.2s, background 0.2s, border-radius 0.2s;
+    transition: width 0.2s, height 0.2s, background 0.2s, border-width 0.2s;
 }
 
-/* 🧶 The White Ship Rope Navigation */
+/* 🧶 White Ship Rope Navigation Bar */
 .rope-nav {
     background: #ffffff;
     border-bottom: 12px solid;
-    /* This will use the rope texture tile we discussed */
+    /* Uses a rope texture tile for a unique maritime feel */
     border-image: url('images/rope-texture.png') 30 repeat; 
     position: relative;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
@@ -55,7 +55,7 @@ body {
     50% { transform: rotate(4deg); }
 }
 
-/* Professional Light Cards */
+/* Info Cards following Professional Light aesthetic */
 .info-card {
     background: #ffffff;
     border: 1px solid #e5e1da;
