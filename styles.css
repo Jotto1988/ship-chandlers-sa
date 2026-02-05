@@ -1,7 +1,7 @@
 :root {
-    --hull-navy: #0f172a; /* Deep Navy from Logo */
-    --deck-gold: #d4af37; /* Brand Gold */
-    --sea-salt: #fcfaf7;  /* Eye-friendly off-white */
+    --hull-navy: #0f172a;
+    --deck-gold: #d4af37;
+    --sea-salt: #fcfaf7;
     --water-white: #ffffff;
 }
 
@@ -11,16 +11,31 @@ body {
     background-color: var(--sea-salt);
     font-family: 'Outfit', sans-serif;
     color: var(--hull-navy);
-    padding-top: 160px; /* Space for top-bar + boat nav */
+    padding-top: 0; /* Hero now starts at the very top */
 }
 
-/* --- CONTACT TOP BAR --- */
-.top-contact-bar {
+/* --- RE-ACTIVATED GOLD RING CURSOR --- */
+#cursor {
     position: fixed;
+    width: 20px;
+    height: 20px;
+    background: var(--deck-gold);
+    border: 2px solid var(--hull-navy);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10000; /* Highest priority */
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s, background 0.2s;
+}
+
+/* --- TOP CONTACT BAR (Transparent) --- */
+.top-contact-bar {
+    position: absolute; /* Changed to absolute so it scrolls or stays atop hero */
     top: 0;
     width: 100%;
-    height: 40px;
-    background: var(--hull-navy);
+    height: 45px;
+    background: rgba(15, 23, 42, 0.4); /* Transparent Tint */
+    backdrop-filter: blur(5px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,19 +45,15 @@ body {
     letter-spacing: 1px;
     text-transform: uppercase;
     color: var(--water-white);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
 }
 
-.top-contact-bar a {
-    color: var(--deck-gold);
-    text-decoration: none;
-    transition: 0.3s;
-}
+.top-contact-bar a { color: var(--deck-gold); text-decoration: none; }
 
-/* --- BOAT NAVIGATION --- */
+/* --- BOAT NAV ON HERO --- */
 header {
-    position: fixed;
-    top: 55px;
+    position: absolute; /* Sits on top of hero */
+    top: 65px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
@@ -60,48 +71,42 @@ header {
     position: relative;
     clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
     border: 1px solid var(--deck-gold);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
 
-.nav-links { display: flex; list-style: none; gap: 30px; align-items: center; }
 .nav-links a {
     color: var(--water-white);
     text-decoration: none;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: 0.3s;
 }
 
-.nav-links a:hover { color: var(--deck-gold); }
+/* --- HERO TEXT POP --- */
+.hero-bg {
+    height: 90vh; /* Increased height */
+    background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.8)), 
+                url('https://get.pxhere.com/photo/sea-coast-ocean-dock-sky-ship-transport-vessel-vehicle-port-industry-freight-cargo-ship-waterway-infrastructure-cargo-commercial-cranes-shipping-vessel-logistics-container-terminal-freight-transport-557146.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-/* --- HERO ANIMATIONS --- */
 .hero-content {
     animation: boatArrival 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    opacity: 0;
 }
 
 @keyframes boatArrival {
-    0% { transform: translateX(-150px); opacity: 0; }
+    0% { transform: translateX(-100px); opacity: 0; }
     100% { transform: translateX(0); opacity: 1; }
 }
 
-/* --- FOOTER SETTINGS --- */
-.footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 40px;
-}
-
-.forge-link {
-    font-size: 9px;
-    color: #94a3b8;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: 0.3s;
-}
-
-@media (max-width: 768px) {
-    .footer-grid { grid-template-columns: 1fr; text-align: center; }
-    .forge-link { margin-top: 20px; order: 10; }
+/* --- CARDS --- */
+.info-card {
+    background: white;
+    border-top: 5px solid var(--deck-gold);
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
