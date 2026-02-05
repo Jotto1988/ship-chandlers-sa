@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /index.html
+Allow: /provisions.html
+Allow: /about.html
+
+# Sitemaps usually go here once the domain is live
+# Sitemap: https://yourdomain.co.za/sitemap.xml
