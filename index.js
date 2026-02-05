@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /**
      * SMOOTH MOUSE TRACKING
+     * Ensures the cursor element follows the mouse movement smoothly
      */
     document.addEventListener('mousemove', (e) => {
         window.requestAnimationFrame(() => {
@@ -13,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /**
      * REACTIVE HOVER STATES
+     * Scales the cursor into a gold ring when hovering over interactive elements.
      */
     const hoverables = document.querySelectorAll('a, button, .info-card, input, textarea, .boat-nav');
     
@@ -34,113 +36,47 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /**
-     * FORM SUBMISSION LOGIC (FORMSPREE)
+     * PHP FORM REDIRECT NOTIFICATIONS (TOASTS)
+     * Detects success/error status from the PHP redirect and shows a notification.
      */
-    const quoteForm = document.getElementById('quoteForm');
-    const successMsg = document.getElementById('formSuccess');
-    
-    if (quoteForm) {
-        quoteForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const btn = quoteForm.querySelector('button');
-            const originalText = btn.innerText;
-            btn.disabled = true;
-            btn.innerText = "Sending Enquiry...";
+    const urlParams = new URLSearchParams(window.location.search);
+    const status = urlParams.get('status');
 
-            try {
-                const res = await fetch(quoteForm.action, {
-                    method: 'POST',
-                    body: new FormData(quoteForm),
-                    headers: { 'Accept': 'application/json' }
-                });
+    if (status) {
+        // Create toast container
+        const toast = document.createElement('div');
+        toast.style.position = 'fixed';
+        toast.style.bottom = '30px';
+        toast.style.right = '30px';
+        toast.style.padding = '20px 30px';
+        toast.style.borderRadius = '8px';
+        toast.style.color = '#0f172a';
+        toast.style.fontWeight = 'bold';
+        toast.style.zIndex = '10000';
+        toast.style.boxShadow = '0 10px 30px rgba(0,0,0,0.3)';
+        toast.style.fontFamily = 'Outfit, sans-serif';
+        toast.style.textTransform = 'uppercase';
+        toast.style.letterSpacing = '1px';
+        toast.style.fontSize = '12px';
 
-                if (res.ok) {
-                    quoteForm.classList.add('hidden');
-                    successMsg.classList.remove('hidden');
-                } else {
-                    throw new Error('Submission failed');
-                }
-            } catch (err) {
-                alert("Submission failed. Please WhatsApp us: +27 67 659 2296");
-                btn.disabled = false;
-                btn.innerText = originalText;
-            }
-        });
-    }
-});document.addEventListener('DOMContentLoaded', () => {
-    const cursor = document.getElementById('cursor');
+        if (status === 'success') {
+            toast.style.background = '#d4af37'; // Brand Gold
+            toast.innerHTML = '<i class="fas fa-anchor mr-2"></i> Quote Request Sent Successfully!';
+        } else if (status === 'error') {
+            toast.style.background = '#ff4444'; // Red for error
+            toast.innerHTML = '<i class="fas fa-exclamation-triangle mr-2"></i> Submission Failed. Please Call Us.';
+        }
 
-    /**
-     * SMOOTH MOUSE TRACKING
-     * Ensures the cursor element follows the mouse movement smoothly
-     */
-    document.addEventListener('mousemove', (e) => {
-        window.requestAnimationFrame(() => {
-            cursor.style.left = `${e.clientX}px`;
-            cursor.style.top = `${e.clientY}px`;
-        });
-    });
+        document.body.appendChild(toast);
 
-    /**
-     * REACTIVE HOVER STATES
-     * Scales the cursor into a gold ring when hovering over interactive elements.
-     * Added '.boat-nav' to ensure the cursor is visible over the navigation hull.
-     */
-    const hoverables = document.querySelectorAll('a, button, .info-card, input, textarea, .boat-nav');
-    
-    hoverables.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            cursor.style.width = '60px'; // Expanded for better interaction feel
-            cursor.style.height = '60px';
-            cursor.style.background = 'transparent';
-            cursor.style.borderColor = '#d4af37'; // Brand Gold
-            cursor.style.borderWidth = '3px';
-        });
-        el.addEventListener('mouseleave', () => {
-            cursor.style.width = '20px'; // Restored base size
-            cursor.style.height = '20px';
-            cursor.style.background = '#d4af37'; // Brand Gold
-            cursor.style.borderWidth = '2px';
-            cursor.style.borderColor = '#0f172a'; // Brand Navy
-        });
-    });
+        // Fade out and remove after 5 seconds
+        setTimeout(() => {
+            toast.style.transition = 'opacity 1s ease';
+            toast.style.opacity = '0';
+            setTimeout(() => toast.remove(), 1000);
+        }, 5000);
 
-    /**
-     * FORM SUBMISSION LOGIC (FORMSPREE)
-     * Handles the re-supply enquiry form on the Contact page.
-     */
-    const quoteForm = document.getElementById('quoteForm');
-    const successMsg = document.getElementById('formSuccess');
-    
-    if (quoteForm) {
-        quoteForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            const btn = quoteForm.querySelector('button');
-            const originalText = btn.innerText;
-            
-            btn.disabled = true;
-            btn.innerText = "Sending Enquiry...";
-
-            try {
-                const res = await fetch(quoteForm.action, {
-                    method: 'POST',
-                    body: new FormData(quoteForm),
-                    headers: { 'Accept': 'application/json' }
-                });
-
-                if (res.ok) {
-                    quoteForm.classList.add('hidden');
-                    successMsg.classList.remove('hidden');
-                } else {
-                    throw new Error('Submission failed');
-                }
-            } catch (err) {
-                // Fallback contact info from source document
-                alert("Submission failed. Please WhatsApp us: +27 67 659 2296");
-                btn.disabled = false;
-                btn.innerText = originalText;
-            }
-        });
+        // Clean up URL so notification doesn't repeat on manual refresh
+        window.history.replaceState({}, document.title, window.location.pathname);
     }
 });
