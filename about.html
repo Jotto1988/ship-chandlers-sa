@@ -5,46 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Ship Chandlers SA</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="pt-32">
-    <nav class="nav-container px-10 py-5 flex justify-between items-center">
-        <img src="images/logo.jpg" alt="Logo" class="h-16">
-        <div class="hidden md:flex items-center gap-8">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="provisions.html" class="nav-link">Provisions</a>
-            <a href="about.html" class="nav-link" style="color:#d4af37">About Us</a>
-            <a href="contact.html" class="btn-quote">GET A QUOTE</a>
-        </div>
-    </nav>
+<body>
+    <div id="cursor"></div>
 
-    <section class="max-w-5xl mx-auto py-20 px-8">
-        <h1 class="section-title uppercase">Our Story</h1>
-        <p class="text-lg mb-8 leading-relaxed">Since the city's establishment as a vital victualing station in 1652 for ships traversing to and from the Dutch East Indies, the Port of Cape Town has continuously grown and progressed. Established in 1994 (as Express Ship Chandlers), we are built on a foundation of expertise and knowledge.</p>
+    <div class="hero-bg relative !h-[60vh]">
+        <div class="top-contact-bar">
+            <span><i class="fas fa-phone mr-2 text-[#d4af37]"></i> +27 21 213-4786</span>
+            <span><i class="fas fa-envelope mr-2 text-[#d4af37]"></i> capetown@shipchandlers.co.za</span>
+            <span class="hidden md:inline"><i class="fab fa-whatsapp mr-2 text-[#d4af37]"></i> +27 67 659 2296</span>
+        </div>
+
+        <header>
+            <div class="boat-nav">
+                <div class="flex items-center gap-4">
+                    <img src="images/logo.jpg" alt="Logo" class="h-12 border border-white/10">
+                    <div class="flex flex-col text-white">
+                        <span class="text-sm font-bold uppercase tracking-tighter leading-none">Ship Chandlers <span class="text-[#d4af37]">SA</span></span>
+                        <span class="text-[8px] uppercase tracking-[0.2em] opacity-70">Maritime Excellence</span>
+                    </div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="provisions.html">Provisions</a></li>
+                    <li><a href="about.html" class="text-[#d4af37]">About Us</a></li>
+                    <li><a href="contact.html" class="quote-link">Request Quote</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="hero-content text-center px-8 pt-32 mt-8">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-4 uppercase tracking-tight drop-shadow-2xl">
+                Our <span class="text-[#d4af37]">Story</span>
+            </h1>
+            <p class="text-white text-lg uppercase tracking-[0.3em] drop-shadow-lg">Dedicated to Maritime Excellence since 1994</p>
+        </div>
+    </div>
+
+    <section class="py-24 px-8 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-center mb-24">
+            <div>
+                <h2 class="text-3xl font-bold mb-8 text-[#0f172a] uppercase tracking-tight border-l-4 border-[#d4af37] pl-6">Strategic Location, Historic Roots</h2>
+                <p class="text-slate-600 leading-relaxed mb-6">
+                    Ship Chandlers South Africa is proud to serve the maritime industry from its strategic location in the historic Cape Town Harbour. Since the city's establishment as a vital victualing station in 1652 for ships traversing to and from the Dutch East Indies, the Port of Cape Town has continuously grown and progressed.
+                </p>
+                <p class="text-slate-600 leading-relaxed mb-6">
+                    Today, it is a bustling hub featuring two docks, multi-purpose and fruit terminals, a dry dock, repair quay, an extensive yachting marina, and a tanker basin. We are honoured to play a crucial role in the ongoing development and success of this industry.
+                </p>
+                <div class="bg-slate-50 p-6 border border-slate-100 rounded italic text-slate-500 text-sm">
+                    "We are committed to understanding what your vessel truly requires, ensuring our delivery is executed with care, speed, and consistency."
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -top-4 -left-4 w-full h-full border-2 border-[#d4af37] rounded-lg"></div>
+                <img src="images/lindsay.png" alt="Lindsay - Managing Director" class="relative z-10 w-full rounded-lg shadow-2xl filter grayscale-[20%] hover:grayscale-0 transition-all duration-500">
+                <div class="absolute bottom-6 right-6 z-20 bg-[#0f172a] text-white p-4 shadow-xl">
+                    <p class="font-bold uppercase tracking-widest text-xs mb-1">Lindsay</p>
+                    <p class="text-[10px] text-[#d4af37] uppercase tracking-tighter">Managing Director</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-10 mb-24">
+            <div class="bg-[#0f172a] text-white p-12 rounded-lg shadow-xl">
+                <h3 class="text-[#d4af37] font-bold uppercase tracking-widest mb-4">Our Mission</h3>
+                <p class="font-light opacity-90 leading-relaxed">Our mission is to make ship chandling smoother, quicker, and more environmentally responsible. We are dedicated to serving every client with care, while also fulfilling our part to protect the vital waters we all depend on.</p>
+            </div>
+            <div class="bg-white p-12 border border-slate-200 rounded-lg shadow-sm">
+                <h3 class="text-[#0f172a] font-bold uppercase tracking-widest mb-4">Our Vision</h3>
+                <p class="text-slate-600 leading-relaxed">We aspire to help shape a better future for maritime supply, where reliable service and responsible choices are always intertwined. Our goal is to consistently set a higher standard in every port we serve.</p>
+            </div>
+        </div>
+
+        <h3 class="text-2xl font-bold mb-8 uppercase text-[#0f172a] text-center">Serving Cape Town's Dynamic Port</h3>
+        <p class="mb-10 text-center text-slate-600 max-w-3xl mx-auto">Situated along one of the world's busiest trade routes, the Port of Cape Town functions as a crucial transhipment logistics base for numerous fishing, diamond, and oil industry fleets. We support diverse vessels including:</p>
         
-        <div class="grid md:grid-cols-2 gap-10 mb-20">
-            <div class="bg-[#0f172a] text-white p-10 rounded-lg">
-                <h2 class="text-[#d4af37] font-bold uppercase mb-4 tracking-widest">Our Mission</h2>
-                <p class="font-light">To make ship chandling smoother, quicker, and more environmentally responsible while protecting the vital waters we all depend on.</p>
-            </div>
-            <div class="bg-white p-10 border border-slate-200 rounded-lg">
-                <h2 class="text-[#0f172a] font-bold uppercase mb-4 tracking-widest">Our Vision</h2>
-                <p class="text-slate-600">To help shape a better future for maritime supply, where reliable service and responsible choices are always intertwined.</p>
-            </div>
-        </div>
-
-        <h3 class="text-2xl font-extrabold mb-6 uppercase">Vessels We Support:</h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm font-bold uppercase text-slate-500">
-            <p>• Container Vessels</p>
-            <p>• Cruise Liners</p>
-            <p>• Fishing Vessels</p>
-            <p>• Private Yachts</p>
-            <p>• Cargo Vessels</p>
-            <p>• LNG Vessels</p>
-            <p>• Oil Carriers</p>
-            <p>• Offshore Oil Rigs</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-[10px] font-bold uppercase tracking-widest text-slate-500 text-center">
+            <div class="p-4 border border-slate-100 bg-white rounded-md hover:text-[#d4af37] hover:border-[#d4af37] transition-all">Container Vessels</div>
+            <div class="p-4 border border-slate-100 bg-white rounded-md hover:text-[#d4af37] hover:border-[#d4af37] transition-all">Cruise Liners</div>
+            <div class="p-4 border border-slate-100 bg-white rounded-md hover:text-[#d4af37] hover:border-[#d4af37] transition-all">Fishing Vessels</div>
+            <div class="p-4 border border-slate-100 bg-white rounded-md hover:text-[#d4af37] hover:border-[#d4af37] transition-all">Private Yachts</div>
+            <div class="p-4 border border-slate-100 bg-white rounded-md hover:text-[#d4af37] hover:border-[#d4af37] transition-all">Cargo Vessels</div>
+            <div class="p-4 border border-slate-100 bg-white rounded-md hover:text-[#d4af37] hover:border-[#d4af37] transition-all">LNG Vessels</div>
+            <div class="p-4 border border-slate-100 bg-white rounded-md hover:text-[#d4af37] hover:border-[#d4af37] transition-all">Oil Carriers</div>
+            <div class="p-4 border border-slate-100 bg-white rounded-md hover:text-[#d4af37] hover:border-[#d4af37] transition-all">Offshore Oil Rigs</div>
         </div>
     </section>
+
+    <footer class="bg-[#0f172a] text-slate-400 py-12 px-10 flex justify-between items-end">
+        <div>
+            <h5 class="text-[#d4af37] font-bold uppercase text-xs mb-4 tracking-widest">Ship Chandlers SA</h5>
+            <p class="text-xs">Established 1994 as Express Ship Chandlers.</p>
+            <p class="text-xs mt-1">📍 Cape Town Harbour, South Africa</p>
+        </div>
+        <div class="text-right">
+            <ul class="text-xs space-y-1 mb-4">
+                <li><a href="index.html" class="hover:text-[#d4af37]">Home</a></li>
+                <li><a href="provisions.html" class="hover:text-[#d4af37]">Provisions</a></li>
+                <li><a href="about.html" class="text-[#d4af37]">About Us</a></li>
+                <li><a href="contact.html" class="hover:text-[#d4af37]">Contact Us</a></li>
+            </ul>
+            <a href="https://forgevertical.com" class="text-[9px] uppercase tracking-widest text-slate-600">Built by Forgevertical.com</a>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>
