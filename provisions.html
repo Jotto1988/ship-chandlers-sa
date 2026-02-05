@@ -3,56 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Provisions | Ship Chandlers SA</title>
+    <title>Provisions & Supplies | Ship Chandlers SA</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="pt-32">
-    <nav class="nav-container px-10 py-5 flex justify-between items-center">
-        <img src="images/logo.jpg" alt="Logo" class="h-16">
-        <div class="hidden md:flex items-center gap-8">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="provisions.html" class="nav-link" style="color:#d4af37">Provisions</a>
-            <a href="about.html" class="nav-link">About Us</a>
-            <a href="contact.html" class="btn-quote">GET A QUOTE</a>
+<body>
+    <div id="cursor"></div>
+
+    <div class="hero-bg relative !h-[50vh]">
+        <div class="top-contact-bar">
+            <span><i class="fas fa-phone mr-2 text-[#d4af37]"></i> +27 21 213-4786</span>
+            <span><i class="fas fa-envelope mr-2 text-[#d4af37]"></i> capetown@shipchandlers.co.za</span>
+            <span class="hidden md:inline"><i class="fab fa-whatsapp mr-2 text-[#d4af37]"></i> +27 67 659 2296</span>
         </div>
-    </nav>
 
-    <section class="max-w-7xl mx-auto py-20 px-8">
-        <h1 class="section-title uppercase">Comprehensive Provisions & Supplies</h1>
-        <p class="mb-12 text-slate-600 max-w-3xl">We pride ourselves on being experts at matching product specifications, ensuring we can always source exactly what your vessel requires.</p>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="info-card">
-                <h4 class="font-bold text-[#d4af37] mb-2 uppercase text-sm">Food & Beverage</h4>
-                <p class="text-sm">A full spectrum of fresh and dry provisions, including frozen and chilled items.</p>
-            </div>
-            <div class="info-card">
-                <h4 class="font-bold text-[#d4af37] mb-2 uppercase text-sm">Engine Room</h4>
-                <p class="text-sm">A full range of tools, parts, cleaning products, oils, grease, lubricants, and hoses.</p>
-            </div>
-            <div class="info-card">
-                <h4 class="font-bold text-[#d4af37] mb-2 uppercase text-sm">Safety Gear</h4>
-                <p class="text-sm">Critical personal safety equipment, lifeboat equipment, firefighting gear, and crew protection.</p>
-            </div>
-            <div class="info-card">
-                <h4 class="font-bold text-[#d4af37] mb-2 uppercase text-sm">Electrical</h4>
-                <p class="text-sm">Power tools, electronic equipment (220V and 110V), hardware, and general equipment.</p>
-            </div>
-            <div class="info-card">
-                <h4 class="font-bold text-[#d4af37] mb-2 uppercase text-sm">Deck Equipment</h4>
-                <p class="text-sm">General deck equipment, ropes, rigging, and various lifting equipment.</p>
-            </div>
-            <div class="info-card">
-                <h4 class="font-bold text-[#d4af37] mb-2 uppercase text-sm">Additional Services</h4>
-                <ul class="text-xs space-y-1 mt-2">
-                    <li>• Global SIM Cards (171 countries)</li>
-                    <li>• Bunkering Liaison</li>
-                    <li>• Waste Removal</li>
+        <header>
+            <div class="boat-nav">
+                <div class="flex items-center gap-4">
+                    <img src="images/logo.jpg" alt="Logo" class="h-12 border border-white/10">
+                    <div class="flex flex-col text-white">
+                        <span class="text-sm font-bold uppercase tracking-tighter leading-none">Ship Chandlers <span class="text-[#d4af37]">SA</span></span>
+                        <span class="text-[8px] uppercase tracking-[0.2em] opacity-70">Maritime Excellence</span>
+                    </div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="provisions.html" class="text-[#d4af37]">Provisions</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html" class="quote-link">Request Quote</a></li>
                 </ul>
+            </div>
+        </header>
+
+        <div class="hero-content text-center px-8">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-4 uppercase tracking-tight">Provisions & <span class="text-[#d4af37]">Supplies</span></h1>
+            <p class="text-white text-lg uppercase tracking-[0.3em]">Comprehensive Port Logistics</p>
+        </div>
+    </div>
+
+    <section class="py-16 px-8 max-w-5xl mx-auto text-center">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6 uppercase text-[#0f172a]">Matching Product Specifications</h2>
+        <p class="text-slate-600 leading-relaxed">
+            Ship Chandlers South Africa offers a comprehensive portfolio of provisions and supplies, catering to the diverse needs of vessels docking in Cape Town Harbour. We pride ourselves on being experts at matching product specifications, ensuring we can always source exactly what your vessel requires.
+        </p>
+    </section>
+
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="info-card">
+                    <img src="images/food.jpg" class="value-img" alt="Food and Beverage">
+                    <h4 class="font-bold mb-4 uppercase text-[#d4af37] text-sm">Food & Beverage</h4>
+                    <p class="text-xs text-slate-600">A full spectrum of fresh and dry provisions, including frozen and chilled items.</p>
+                </div>
+                <div class="info-card">
+                    <img src="images/engine.jpg" class="value-img" alt="Engine Supplies">
+                    <h4 class="font-bold mb-4 uppercase text-[#d4af37] text-sm">Engine Room Supplies</h4>
+                    <p class="text-xs text-slate-600">A full range of tools, parts, cleaning products, oils, grease, lubricants, and hoses.</p>
+                </div>
+                <div class="info-card">
+                    <img src="images/safety_gear.jpg" class="value-img" alt="Safety Gear">
+                    <h4 class="font-bold mb-4 uppercase text-[#d4af37] text-sm">Safety Gear</h4>
+                    <p class="text-xs text-slate-600">Critical personal safety equipment, lifeboat equipment, firefighting gear, and crew protection.</p>
+                </div>
+                <div class="info-card">
+                    <img src="images/deck.jpg" class="value-img" alt="Deck Equipment">
+                    <h4 class="font-bold mb-4 uppercase text-[#d4af37] text-sm">Deck Equipment</h4>
+                    <p class="text-xs text-slate-600">General deck equipment, ropes and rigging equipment, and various lifting equipment.</p>
+                </div>
+                <div class="info-card">
+                    <img src="images/medical.jpg" class="value-img" alt="Medical Office">
+                    <h4 class="font-bold mb-4 uppercase text-[#d4af37] text-sm">Medical & Office</h4>
+                    <p class="text-xs text-slate-600">Specialist medical supplies and full office stationery, from toners to computers.</p>
+                </div>
+                <div class="info-card">
+                    <img src="images/cabin.jpg" class="value-img" alt="Cabin Clothing">
+                    <h4 class="font-bold mb-4 uppercase text-[#d4af37] text-sm">Clothing & Cabin</h4>
+                    <p class="text-xs text-slate-600">Hardware provisions, kitchenware, and a wide selection of clothing, including boots and jackets.</p>
+                </div>
             </div>
         </div>
     </section>
+
+    <section class="py-20 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-5xl mx-auto px-8">
+            <h3 class="text-3xl font-bold mb-12 text-center uppercase text-[#0f172a]">Additional Services</h3>
+            <div class="space-y-6">
+                <div class="flex items-start gap-6 p-8 bg-white border-l-4 border-[#d4af37] shadow-sm">
+                    <div class="text-3xl">📱</div>
+                    <div>
+                        <h4 class="font-bold uppercase text-sm mb-2">Global SIM Cards</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">Procuring global SIM cards to enable your crew to stay connected with internet access, calls, and SMS in 171 countries worldwide.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-6 p-8 bg-white border-l-4 border-[#d4af37] shadow-sm">
+                    <div class="text-3xl">⛽</div>
+                    <div>
+                        <h4 class="font-bold uppercase text-sm mb-2">Bunkering Liaison</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">Facilitating contact with a reputable water and oil-bunkering service provider within Cape Town Harbour.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-6 p-8 bg-white border-l-4 border-[#d4af37] shadow-sm">
+                    <div class="text-3xl">🚛</div>
+                    <div>
+                        <h4 class="font-bold uppercase text-sm mb-2">Waste Removal</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">Assisting with high-volume waste removal services, bringing the skip directly to you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#0f172a] text-slate-400 py-12 px-10 flex justify-between items-end">
+        <div>
+            <h5 class="text-[#d4af37] font-bold uppercase text-xs mb-4">Ship Chandlers SA</h5>
+            <p class="text-xs">Established 1994 as Express Ship Chandlers.</p>
+        </div>
+        <div class="text-right">
+            <ul class="text-xs space-y-1 mb-4">
+                <li><a href="index.html" class="hover:text-[#d4af37]">Home</a></li>
+                <li><a href="provisions.html" class="text-[#d4af37]">Provisions</a></li>
+                <li><a href="about.html" class="hover:text-[#d4af37]">About Us</a></li>
+                <li><a href="contact.html" class="hover:text-[#d4af37]">Contact Us</a></li>
+            </ul>
+            <a href="https://forgevertical.com" class="text-[9px] uppercase tracking-widest text-slate-600">Built by Forgevertical.com</a>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>
