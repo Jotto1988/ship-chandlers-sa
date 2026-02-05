@@ -5,8 +5,13 @@
     --water-white: #ffffff;
 }
 
-/* Global Reset to eliminate top white space */
-* { margin: 0; padding: 0; box-sizing: border-box; cursor: none !important; }
+/* Global Reset to eliminate top white space and manage custom cursor */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    cursor: none !important; 
+}
 
 body {
     background-color: var(--sea-salt);
@@ -15,7 +20,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ⚓ FIXED CURSOR LOGIC */
+/* ⚓ CURSOR LOCK - Highest priority z-index */
 #cursor {
     position: fixed;
     width: 20px;
@@ -24,12 +29,12 @@ body {
     border: 2px solid var(--hull-navy);
     border-radius: 50%;
     pointer-events: none;
-    z-index: 99999; /* Highest priority to ensure visibility */
+    z-index: 99999; 
     transform: translate(-50%, -50%);
-    transition: width 0.2s, height 0.2s;
+    transition: width 0.2s, height 0.2s, background 0.2s;
 }
 
-/* --- TOP CONTACT BAR (Integrated into Hero) --- */
+/* --- TOP CONTACT BAR --- */
 .top-contact-bar {
     position: absolute;
     top: 0;
@@ -67,15 +72,14 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 80px;
+    padding: 0 70px;
     position: relative;
-    /* Creating the long boat silhouette with pointed ends */
+    /* Create the long boat silhouette with pointed/rounded ends */
     clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
     border: 1px solid var(--deck-gold);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
 
-/* The Internal Outline (Haley Park reference style) */
+/* Internal Hull Pinstripe  */
 .boat-nav::after {
     content: '';
     position: absolute;
@@ -95,6 +99,8 @@ header {
     transition: 0.3s;
 }
 
+.nav-links a:hover { color: var(--deck-gold); }
+
 .quote-link {
     font-family: 'Playfair Display', serif;
     font-style: italic;
@@ -103,7 +109,12 @@ header {
     color: var(--deck-gold) !important;
 }
 
-/* --- HERO VISIBILITY FIX --- */
+.quote-link:hover {
+    background: var(--deck-gold);
+    color: var(--hull-navy) !important;
+}
+
+/* --- HERO SECTION --- */
 .hero-bg {
     height: 95vh;
     background: linear-gradient(rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.75)), 
@@ -140,4 +151,5 @@ header {
     padding: 30px;
     border: 1px solid #e5e7eb;
     box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    text-align: center;
 }
