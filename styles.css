@@ -1,5 +1,5 @@
 :root {
-    --hull-dark: #0f172a; /* Matched to logo navy */
+    --hull-dark: #0f172a;
     --deck-gold: #d4af37;
     --sea-salt: #fcfaf7;
     --water-white: #ffffff;
@@ -7,117 +7,106 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; cursor: none !important; }
 
-body {
-    background-color: var(--sea-salt);
-    font-family: 'Outfit', sans-serif;
-    color: var(--hull-dark);
-}
+body { background-color: var(--sea-salt); font-family: 'Outfit', sans-serif; color: var(--hull-dark); }
 
-/* --- LONG BOAT NAVIGATION --- */
+/* --- REFINED BOAT NAVIGATION --- */
 header {
     position: absolute;
-    top: 75px;
+    top: 60px;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
-    max-width: 1400px;
+    width: 92%;
+    max-width: 1300px;
     z-index: 1000;
 }
 
 .boat-nav {
     background: var(--hull-dark);
-    height: 85px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 80px;
+    padding: 0 70px;
     position: relative;
-    clip-path: polygon(3% 0%, 97% 0%, 100% 50%, 97% 100%, 3% 100%, 0% 50%);
+    /* Rounded Boat Hull Shape */
+    clip-path: polygon(4% 0%, 96% 0%, 100% 50%, 96% 100%, 4% 100%, 0% 50%);
+    border-radius: 40px; /* Gives the ends a smoother, rounded boat feel */
     border: 1px solid var(--deck-gold);
 }
 
-/* Internal Hull Line (The double line ship feeling) */
+/* The Internal Ship-Style Pinstripe */
 .boat-nav::after {
     content: '';
     position: absolute;
-    top: 6px; left: 10px; right: 10px; bottom: 6px;
-    border: 1px solid rgba(212, 175, 55, 0.4);
+    top: 8px; left: 15px; right: 15px; bottom: 8px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
     pointer-events: none;
-    clip-path: polygon(3% 0%, 97% 0%, 100% 50%, 97% 100%, 3% 100%, 0% 50%);
+    clip-path: polygon(4% 0%, 96% 0%, 100% 50%, 96% 100%, 4% 100%, 0% 50%);
+    border-radius: 35px;
 }
 
-.nav-links { 
-    display: flex !important; /* Forces horizontal alignment */
-    flex-direction: row !important;
-    list-style: none; 
-    gap: 40px; 
-    align-items: center; 
-}
-
+.nav-links { display: flex; list-style: none; gap: 35px; align-items: center; }
 .nav-links a {
     color: var(--water-white);
     text-decoration: none;
     font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-weight: 300;
 }
 
-.quote-link {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    border: 1px solid var(--deck-gold);
-    padding: 10px 25px !important;
-    color: var(--deck-gold) !important;
+/* --- HERO & BACKGROUND FIX --- */
+.hero-bg-container {
+    height: 85vh;
+    width: 100%;
+    position: relative;
+    background-color: var(--hull-dark);
 }
 
-/* --- HERO TEXT AND ANIMATION --- */
-.hero-bg {
-    height: 95vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.hero-bg-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6; /* Adjust this to make the text pop more */
+    filter: grayscale(20%);
 }
 
 .hero-content {
+    position: relative;
+    z-index: 20;
     animation: boatArrival 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes boatArrival {
-    0% { transform: translateX(-150px); opacity: 0; }
+    0% { transform: translateX(-100px); opacity: 0; }
     100% { transform: translateX(0); opacity: 1; }
 }
 
-/* --- CONTACT TOP BAR --- */
+/* --- TOP CONTACT BAR --- */
 .top-contact-bar {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 45px;
-    background: rgba(15, 23, 42, 0.5);
-    backdrop-filter: blur(8px);
+    height: 40px;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(5px);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
     z-index: 1001;
-    font-size: 11px;
+    font-size: 10px;
     letter-spacing: 1.5px;
-    text-transform: uppercase;
     color: var(--water-white);
 }
 
-/* --- POINTER CURSOR --- */
-#cursor {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    background: var(--deck-gold);
-    border: 2px solid var(--hull-dark);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 10000;
-    transform: translate(-50%, -50%);
+/* --- VALUE CARDS --- */
+.value-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--deck-gold);
 }
