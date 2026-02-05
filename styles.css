@@ -1,112 +1,143 @@
 :root {
-    --hull-dark: #0f172a;
+    --hull-navy: #0f172a;
     --deck-gold: #d4af37;
     --sea-salt: #fcfaf7;
     --water-white: #ffffff;
 }
 
+/* Global Reset to eliminate top white space */
 * { margin: 0; padding: 0; box-sizing: border-box; cursor: none !important; }
 
-body { background-color: var(--sea-salt); font-family: 'Outfit', sans-serif; color: var(--hull-dark); }
-
-/* --- REFINED BOAT NAVIGATION --- */
-header {
-    position: absolute;
-    top: 60px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 92%;
-    max-width: 1300px;
-    z-index: 1000;
+body {
+    background-color: var(--sea-salt);
+    font-family: 'Outfit', sans-serif;
+    color: var(--hull-navy);
+    overflow-x: hidden;
 }
 
-.boat-nav {
-    background: var(--hull-dark);
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 70px;
-    position: relative;
-    /* Rounded Boat Hull Shape */
-    clip-path: polygon(4% 0%, 96% 0%, 100% 50%, 96% 100%, 4% 100%, 0% 50%);
-    border-radius: 40px; /* Gives the ends a smoother, rounded boat feel */
-    border: 1px solid var(--deck-gold);
-}
-
-/* The Internal Ship-Style Pinstripe */
-.boat-nav::after {
-    content: '';
-    position: absolute;
-    top: 8px; left: 15px; right: 15px; bottom: 8px;
-    border: 1px solid rgba(212, 175, 55, 0.3);
+/* ⚓ FIXED CURSOR LOGIC */
+#cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: var(--deck-gold);
+    border: 2px solid var(--hull-navy);
+    border-radius: 50%;
     pointer-events: none;
-    clip-path: polygon(4% 0%, 96% 0%, 100% 50%, 96% 100%, 4% 100%, 0% 50%);
-    border-radius: 35px;
+    z-index: 99999; /* Highest priority to ensure visibility */
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s;
 }
 
-.nav-links { display: flex; list-style: none; gap: 35px; align-items: center; }
-.nav-links a {
-    color: var(--water-white);
-    text-decoration: none;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* --- HERO & BACKGROUND FIX --- */
-.hero-bg-container {
-    height: 85vh;
-    width: 100%;
-    position: relative;
-    background-color: var(--hull-dark);
-}
-
-.hero-bg-img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.6; /* Adjust this to make the text pop more */
-    filter: grayscale(20%);
-}
-
-.hero-content {
-    position: relative;
-    z-index: 20;
-    animation: boatArrival 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-@keyframes boatArrival {
-    0% { transform: translateX(-100px); opacity: 0; }
-    100% { transform: translateX(0); opacity: 1; }
-}
-
-/* --- TOP CONTACT BAR --- */
+/* --- TOP CONTACT BAR (Integrated into Hero) --- */
 .top-contact-bar {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 40px;
-    background: rgba(15, 23, 42, 0.6);
-    backdrop-filter: blur(5px);
+    height: 45px;
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 40px;
     z-index: 1001;
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 1.5px;
     color: var(--water-white);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
 }
 
-/* --- VALUE CARDS --- */
+.top-contact-bar a { color: var(--deck-gold); text-decoration: none; }
+
+/* --- REFINED ROUNDED BOAT HULL NAVIGATION --- */
+header {
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1300px;
+    z-index: 1000;
+}
+
+.boat-nav {
+    background: var(--hull-navy);
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+    position: relative;
+    /* Creating the long boat silhouette with pointed ends */
+    clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+    border: 1px solid var(--deck-gold);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+/* The Internal Outline (Haley Park reference style) */
+.boat-nav::after {
+    content: '';
+    position: absolute;
+    top: 6px; left: 12px; right: 12px; bottom: 6px;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    pointer-events: none;
+    clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+}
+
+.nav-links { display: flex; list-style: none; gap: 40px; align-items: center; }
+.nav-links a {
+    color: var(--water-white);
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.quote-link {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    border: 1px solid var(--deck-gold);
+    padding: 10px 25px;
+    color: var(--deck-gold) !important;
+}
+
+/* --- HERO VISIBILITY FIX --- */
+.hero-bg {
+    height: 95vh;
+    background: linear-gradient(rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.75)), 
+                url('https://get.pxhere.com/photo/sea-coast-ocean-dock-sky-ship-transport-vessel-vehicle-port-industry-freight-cargo-ship-waterway-infrastructure-cargo-commercial-cranes-shipping-vessel-logistics-container-terminal-freight-transport-557146.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    animation: boatArrival 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes boatArrival {
+    0% { transform: translateX(-150px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+/* --- COMMITMENT CARDS --- */
 .value-img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    border-bottom: 3px solid var(--deck-gold);
+    border-radius: 4px;
+    margin-bottom: 25px;
+    border-bottom: 4px solid var(--deck-gold);
+}
+
+.info-card {
+    background: white;
+    padding: 30px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
 }
