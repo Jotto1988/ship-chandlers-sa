@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     hoverables.forEach(el => {
         el.addEventListener('mouseenter', () => {
-            cursor.style.width = '50px'; // Slightly larger for better pop
-            cursor.style.height = '50px';
+            cursor.style.width = '60px'; // Expanded for better interaction feel
+            cursor.style.height = '60px';
             cursor.style.background = 'transparent';
             cursor.style.borderColor = '#d4af37'; // Brand Gold
             cursor.style.borderWidth = '3px';
