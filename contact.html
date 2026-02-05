@@ -3,56 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Ship Chandlers SA</title>
+    <title>Contact Us | Ship Chandlers SA</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .honey { display: none; } /* Honeypot for bots */
+        .form-input { 
+            background: rgba(255, 255, 255, 0.05); 
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .form-input:focus {
+            border-color: #d4af37;
+            outline: none;
+            background: rgba(255, 255, 255, 0.1);
+        }
+    </style>
 </head>
-<body class="pt-32">
-    <nav class="nav-container px-10 py-5 flex justify-between items-center">
-        <img src="images/logo.jpg" alt="Logo" class="h-16">
-        <div class="hidden md:flex items-center gap-8">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="provisions.html" class="nav-link">Provisions</a>
-            <a href="about.html" class="nav-link">About Us</a>
-            <a href="contact.html" class="nav-link" style="color:#d4af37">Contact</a>
-        </div>
-    </nav>
+<body class="bg-[#0f172a]">
+    <div id="cursor"></div>
 
-    <section class="max-w-7xl mx-auto py-20 px-8 grid lg:grid-cols-2 gap-20">
-        <div>
-            <h1 class="section-title uppercase">Get In Touch</h1>
-            <p class="mb-10 text-slate-500 italic">"We are ready to make your re-supply in Cape Town a seamless and fuss-free experience."</p>
+    <div class="hero-bg relative !h-[40vh]">
+        <div class="top-contact-bar">
+            <span><i class="fas fa-phone mr-2 text-[#d4af37]"></i> +27 21 213-4786</span>
+            <span><i class="fas fa-envelope mr-2 text-[#d4af37]"></i> capetown@shipchandlers.co.za</span>
+            <span class="hidden md:inline"><i class="fab fa-whatsapp mr-2 text-[#d4af37]"></i> +27 67 659 2296</span>
+        </div>
+
+        <header>
+            <div class="boat-nav">
+                <div class="flex items-center gap-4">
+                    <img src="images/logo.jpg" alt="Logo" class="h-12 border border-white/10">
+                    <div class="flex flex-col text-white">
+                        <span class="text-sm font-bold uppercase tracking-tighter leading-none">Ship Chandlers <span class="text-[#d4af37]">SA</span></span>
+                        <span class="text-[8px] uppercase tracking-[0.2em] opacity-70">Maritime Excellence</span>
+                    </div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="provisions.html">Provisions</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html" class="text-[#d4af37]">Contact Us</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="hero-content text-center px-8 pt-20">
+            <h1 class="text-5xl font-extrabold text-white uppercase tracking-tight">Request a <span class="text-[#d4af37]">Quote</span></h1>
+        </div>
+    </div>
+
+    <section class="max-w-7xl mx-auto px-8 py-20 grid lg:grid-cols-2 gap-16">
+        
+        <div class="space-y-8">
+            <h2 class="text-3xl font-bold text-white uppercase tracking-widest border-l-4 border-[#d4af37] pl-6">Visit Our Station</h2>
+            <p class="text-slate-400 text-sm">Strategically located to serve the Port of Cape Town, ensuring rapid response for all vessel requirements.</p>
             
-            <div class="space-y-6">
-                <div>
-                    <h4 class="font-bold uppercase text-xs text-[#d4af37] mb-1">Address</h4>
-                    <p>6 Stella Rd, Montague Gardens, Cape Town, 7441</p>
+            <div class="rounded-lg overflow-hidden border border-white/10 grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl h-[400px]">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.2345!2d18.4234!3d-33.9188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDU1JzA3LjciUyAxOMKwMjUnMjQuMiJF!5e0!3m2!1sen!2sza!4v123456789" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 text-xs">
+                <div class="p-4 bg-white/5 border border-white/10 rounded">
+                    <h5 class="text-[#d4af37] font-bold uppercase mb-2">Office Address</h5>
+                    <p class="text-slate-300">Port of Cape Town<br>Montague Gardens Logistics Hub</p>
                 </div>
-                <div>
-                    <h4 class="font-bold uppercase text-xs text-[#d4af37] mb-1">Phone & WhatsApp</h4>
-                    <p>Office: +27 21 213-4786</p>
-                    <p>24/7 WhatsApp: +27 67 659 2296</p>
-                </div>
-                <div>
-                    <h4 class="font-bold uppercase text-xs text-[#d4af37] mb-1">Email</h4>
-                    <p>capetown@shipchandlers.co.za</p>
-                </div>
-                <div>
-                    <h4 class="font-bold uppercase text-xs text-[#d4af37] mb-1">Office Hours</h4>
-                    <p>7:00 AM to 5:00 PM</p>
+                <div class="p-4 bg-white/5 border border-white/10 rounded">
+                    <h5 class="text-[#d4af37] font-bold uppercase mb-2">24/7 Operations</h5>
+                    <p class="text-slate-300">Ready to assist whenever your vessel requires.</p>
                 </div>
             </div>
         </div>
 
-        <div class="info-card">
-            <h3 class="text-xl font-bold mb-6">Enquire Now</h3>
-            <form action="https://formspree.io/f/YOUR_ID" method="POST" class="space-y-4">
-                <input type="text" name="vessel" placeholder="Vessel Name" required class="w-full p-4 border border-slate-200 rounded outline-none focus:border-[#d4af37]">
-                <textarea name="requirements" placeholder="Supply Requirements" required class="w-full p-4 border border-slate-200 rounded h-32 outline-none focus:border-[#d4af37]"></textarea>
-                <button type="submit" class="w-full bg-[#0f172a] text-white py-4 font-bold uppercase tracking-widest hover:bg-slate-800 transition">Send Enquiry</button>
+        <div class="bg-white/5 p-10 rounded-xl border border-white/10 shadow-2xl backdrop-blur-sm">
+            <form action="https://formspree.io/f/YOUR_ID" method="POST" enctype="multipart/form-data" class="space-y-6">
+                
+                <input type="text" name="_trap" class="honey">
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-[10px] uppercase text-[#d4af37] font-bold mb-2">Contact Name</label>
+                        <input type="text" name="name" required class="w-full p-4 rounded form-input text-sm" placeholder="Capt. John Doe">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase text-[#d4af37] font-bold mb-2">Ship Name / IMO</label>
+                        <input type="text" name="ship_name" required class="w-full p-4 rounded form-input text-sm" placeholder="MV Maritime Excel">
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-[10px] uppercase text-[#d4af37] font-bold mb-2">Email Address</label>
+                        <input type="email" name="email" required class="w-full p-4 rounded form-input text-sm" placeholder="bridge@vessel.com">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase text-[#d4af37] font-bold mb-2">Contact Number</label>
+                        <input type="tel" name="phone" required class="w-full p-4 rounded form-input text-sm" placeholder="+27 ...">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-[10px] uppercase text-[#d4af37] font-bold mb-2">Details of Requirements</label>
+                    <textarea name="message" rows="4" class="w-full p-4 rounded form-input text-sm" placeholder="Please list provisions, engine parts, or deck supplies..."></textarea>
+                </div>
+
+                <div class="relative group">
+                    <label class="block text-[10px] uppercase text-[#d4af37] font-bold mb-2">Upload Provision List (PDF/JPG)</label>
+                    <div class="flex items-center justify-center w-full">
+                        <label class="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-white/20 rounded-lg cursor-pointer hover:bg-white/5 transition">
+                            <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                <i class="fas fa-paperclip text-[#d4af37] text-2xl mb-3"></i>
+                                <p class="text-xs text-slate-400">Attach file or drag and drop</p>
+                            </div>
+                            <input type="file" name="upload" class="hidden" />
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full py-4 bg-[#d4af37] text-[#0f172a] font-bold uppercase tracking-widest rounded hover:bg-white transition-all duration-300">
+                    Send Request
+                </button>
             </form>
         </div>
     </section>
+
+    <footer class="bg-[#0b1221] text-slate-500 py-12 px-10 border-t border-white/5">
+        <div class="max-w-7xl mx-auto flex justify-between items-end">
+            <div>
+                <h5 class="text-[#d4af37] font-bold uppercase text-xs mb-4">Ship Chandlers SA</h5>
+                <p class="text-[10px]">Reliability at Every Step. Established 1994.</p>
+            </div>
+            <div class="text-right">
+                <a href="https://forgevertical.com" class="text-[9px] uppercase tracking-widest hover:text-[#d4af37]">Built by Forgevertical.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>
