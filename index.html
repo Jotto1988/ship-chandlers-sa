@@ -6,44 +6,49 @@
     <title>Ship Chandlers South Africa | Cape Town Harbour</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="selection:bg-[#d4af37] selection:text-white">
     <div id="cursor"></div>
 
-    <div class="top-contact-bar">
-        <span><i class="fas fa-phone mr-2"></i> +27 21 213-4786</span>
-        <span><i class="fas fa-envelope mr-2"></i> <a href="mailto:capetown@shipchandlers.co.za">capetown@shipchandlers.co.za</a></span>
-        <span class="hidden md:inline"><i class="fab fa-whatsapp mr-2"></i> +27 67 659 2296</span>
-    </div>
-
-    <header>
-        <div class="boat-nav">
-            <div class="logo-area">
-                <img src="images/logo.jpg" alt="Ship Chandlers SA" class="h-12 brightness-0 invert">
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="provisions.html">Provisions</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html" class="bg-[#d4af37] text-[#0f172a] px-5 py-2 rounded font-bold">Enquire</a></li>
-            </ul>
+    <header class="relative h-[90vh] flex items-center justify-center overflow-hidden">
+        
+        <div class="top-contact-bar absolute top-0 w-full z-30 flex justify-center gap-10 py-3 text-white text-[10px] uppercase tracking-widest bg-slate-900/30 backdrop-blur-sm border-b border-white/10">
+            <span><i class="fas fa-phone mr-2 text-[#d4af37]"></i> +27 21 213-4786</span>
+            <span><i class="fas fa-envelope mr-2 text-[#d4af37]"></i> capetown@shipchandlers.co.za</span>
+            <span class="hidden md:inline"><i class="fab fa-whatsapp mr-2 text-[#d4af37]"></i> +27 67 659 2296</span>
         </div>
-    </header>
 
-    <header class="relative h-[85vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute top-16 w-[90%] max-w-7xl z-30">
+            <nav class="boat-nav">
+                <div class="logo-area">
+                    <img src="images/logo.jpg" alt="Ship Chandlers SA" class="h-12 brightness-0 invert">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="provisions.html">Provisions</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html" class="quote-link">Request Quote</a></li>
+                </ul>
+                <div class="hamburger md:hidden">
+                    <i class="fa-solid fa-anchor"></i>
+                </div>
+            </nav>
+        </div>
+
         <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/40 to-slate-900/80 z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/40 to-slate-950 z-10"></div>
             <img src="https://get.pxhere.com/photo/sea-coast-ocean-dock-sky-ship-transport-vessel-vehicle-port-industry-freight-cargo-ship-waterway-infrastructure-cargo-commercial-cranes-shipping-vessel-logistics-container-terminal-freight-transport-557146.jpg" 
-                 class="w-full h-full object-cover grayscale-[20%]" alt="Cape Town Port">
+                 class="w-full h-full object-cover grayscale-[20%]" alt="Cape Town Port Operations">
         </div>
         
         <div class="relative z-20 hero-content text-center px-8">
             <h1 class="text-5xl md:text-7xl font-extrabold text-white drop-shadow-2xl mb-6 uppercase tracking-tight">
                 Seamless <span class="text-[#d4af37]">Chandling</span>
             </h1>
-            <p class="text-white text-lg md:text-2xl font-light tracking-[0.2em] uppercase drop-shadow-lg max-w-3xl mx-auto">
-                Reliability at every step in Cape Town Harbour
+            <p class="text-white text-lg md:text-2xl font-light tracking-[0.2em] uppercase drop-shadow-lg max-w-4xl mx-auto">
+                Your Trusted Partner in Cape Town Harbour
             </p>
         </div>
     </header>
@@ -64,7 +69,7 @@
     </section>
 
     <footer class="bg-[#0f172a] text-slate-400 py-16 px-10 border-t border-white/5">
-        <div class="max-w-7xl mx-auto footer-grid">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 items-start">
             <div>
                 <h5 class="text-[#d4af37] font-bold uppercase text-xs mb-6 tracking-widest">Contact Us</h5>
                 <p class="text-sm mb-2">📍 6 Stella Rd, Montague Gardens, Cape Town</p>
@@ -72,7 +77,8 @@
                 <p class="text-sm mb-2">💬 WhatsApp: +27 67 659 2296</p>
                 <p class="text-sm">✉️ capetown@shipchandlers.co.za</p>
             </div>
-            <div>
+            
+            <div class="md:text-center">
                 <h5 class="text-[#d4af37] font-bold uppercase text-xs mb-6 tracking-widest">Explore</h5>
                 <ul class="text-sm space-y-3">
                     <li><a href="index.html" class="hover:text-white transition">Home</a></li>
@@ -81,14 +87,19 @@
                     <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
                 </ul>
             </div>
-            <div class="flex flex-col justify-between items-end">
-                <p class="text-[10px] uppercase tracking-widest opacity-50">© 2026 Ship Chandlers South Africa</p>
-                <a href="https://forgevertical.com" class="forge-link hover:text-[#d4af37]">Built by Forgevertical.com</a>
+            
+            <div class="flex flex-col justify-between items-end h-full">
+                <div class="text-right">
+                    <p class="text-[10px] uppercase tracking-widest opacity-50">© 2026 Ship Chandlers South Africa</p>
+                    <p class="text-[9px] uppercase tracking-tighter mt-1 italic">Reliability at Every Step</p>
+                </div>
+                <a href="https://forgevertical.com" class="text-[9px] uppercase tracking-widest text-slate-600 hover:text-[#d4af37] transition mt-10 md:mt-0">
+                    Built by Forgevertical.com
+                </a>
             </div>
         </div>
     </footer>
 
     <script src="index.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
