@@ -5,13 +5,7 @@
     --water-white: #ffffff;
 }
 
-/* Global Reset to eliminate top white space and manage custom cursor */
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-    cursor: none !important; 
-}
+* { margin: 0; padding: 0; box-sizing: border-box; cursor: none !important; }
 
 body {
     background-color: var(--sea-salt);
@@ -20,7 +14,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ⚓ CURSOR LOCK - Highest priority z-index */
+/* ⚓ CURSOR LOCK */
 #cursor {
     position: fixed;
     width: 20px;
@@ -34,7 +28,7 @@ body {
     transition: width 0.2s, height 0.2s, background 0.2s;
 }
 
-/* --- TOP CONTACT BAR --- */
+/* --- TOP BAR --- */
 .top-contact-bar {
     position: absolute;
     top: 0;
@@ -55,14 +49,14 @@ body {
 
 .top-contact-bar a { color: var(--deck-gold); text-decoration: none; }
 
-/* --- REFINED ROUNDED BOAT HULL NAVIGATION --- */
+/* --- REFINED ROUNDED BOAT NAV --- */
 header {
     position: absolute;
     top: 75px;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
-    max-width: 1300px;
+    width: 94%;
+    max-width: 1400px;
     z-index: 1000;
 }
 
@@ -72,33 +66,25 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 70px;
+    padding: 0 60px;
     position: relative;
-    /* Create the long boat silhouette with pointed/rounded ends */
-    clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+    /* Creating the long boat hull shape */
+    clip-path: polygon(3% 0%, 97% 0%, 100% 50%, 97% 100%, 3% 100%, 0% 50%);
     border: 1px solid var(--deck-gold);
 }
 
-/* Internal Hull Pinstripe  */
+/* Internal Pinstripe Outline */
 .boat-nav::after {
     content: '';
     position: absolute;
-    top: 6px; left: 12px; right: 12px; bottom: 6px;
+    top: 6px; left: 10px; right: 10px; bottom: 6px;
     border: 1px solid rgba(212, 175, 55, 0.35);
     pointer-events: none;
-    clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+    clip-path: polygon(3% 0%, 97% 0%, 100% 50%, 97% 100%, 3% 100%, 0% 50%);
 }
 
 .nav-links { display: flex; list-style: none; gap: 40px; align-items: center; }
-.nav-links a {
-    color: var(--water-white);
-    text-decoration: none;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: 0.3s;
-}
-
+.nav-links a { color: var(--water-white); text-decoration: none; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; }
 .nav-links a:hover { color: var(--deck-gold); }
 
 .quote-link {
@@ -109,15 +95,10 @@ header {
     color: var(--deck-gold) !important;
 }
 
-.quote-link:hover {
-    background: var(--deck-gold);
-    color: var(--hull-navy) !important;
-}
-
 /* --- HERO SECTION --- */
 .hero-bg {
     height: 95vh;
-    background: linear-gradient(rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.75)), 
+    background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.6)), 
                 url('https://get.pxhere.com/photo/sea-coast-ocean-dock-sky-ship-transport-vessel-vehicle-port-industry-freight-cargo-ship-waterway-infrastructure-cargo-commercial-cranes-shipping-vessel-logistics-container-terminal-freight-transport-557146.jpg');
     background-size: cover;
     background-position: center;
@@ -127,9 +108,7 @@ header {
     text-align: center;
 }
 
-.hero-content {
-    animation: boatArrival 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
+.hero-content { animation: boatArrival 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 
 @keyframes boatArrival {
     0% { transform: translateX(-150px); opacity: 0; }
@@ -137,19 +116,18 @@ header {
 }
 
 /* --- COMMITMENT CARDS --- */
-.value-img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 25px;
-    border-bottom: 4px solid var(--deck-gold);
-}
-
 .info-card {
     background: white;
-    padding: 30px;
+    padding: 25px;
     border: 1px solid #e5e7eb;
     box-shadow: 0 4px 20px rgba(0,0,0,0.03);
     text-align: center;
+}
+
+.value-img {
+    width: 100%;
+    height: 200px; /* Force visibility */
+    object-fit: contain; /* Better for graphics like puzzle.png */
+    margin-bottom: 20px;
+    display: block;
 }
