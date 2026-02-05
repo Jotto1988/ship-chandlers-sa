@@ -1,5 +1,5 @@
 :root {
-    --hull-navy: #0f172a;
+    --hull-dark: #0f172a; /* Matched to logo navy */
     --deck-gold: #d4af37;
     --sea-salt: #fcfaf7;
     --water-white: #ffffff;
@@ -10,82 +10,70 @@
 body {
     background-color: var(--sea-salt);
     font-family: 'Outfit', sans-serif;
-    color: var(--hull-navy);
-    padding-top: 0; /* Hero now starts at the very top */
+    color: var(--hull-dark);
 }
 
-/* --- RE-ACTIVATED GOLD RING CURSOR --- */
-#cursor {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    background: var(--deck-gold);
-    border: 2px solid var(--hull-navy);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 10000; /* Highest priority */
-    transform: translate(-50%, -50%);
-    transition: width 0.2s, height 0.2s, background 0.2s;
-}
-
-/* --- TOP CONTACT BAR (Transparent) --- */
-.top-contact-bar {
-    position: absolute; /* Changed to absolute so it scrolls or stays atop hero */
-    top: 0;
-    width: 100%;
-    height: 45px;
-    background: rgba(15, 23, 42, 0.4); /* Transparent Tint */
-    backdrop-filter: blur(5px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    z-index: 1001;
-    font-size: 11px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--water-white);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-}
-
-.top-contact-bar a { color: var(--deck-gold); text-decoration: none; }
-
-/* --- BOAT NAV ON HERO --- */
+/* --- LONG BOAT NAVIGATION --- */
 header {
-    position: absolute; /* Sits on top of hero */
-    top: 65px;
+    position: absolute;
+    top: 75px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
-    max-width: 1200px;
+    max-width: 1400px;
     z-index: 1000;
 }
 
 .boat-nav {
-    background: var(--hull-navy);
-    height: 75px;
+    background: var(--hull-dark);
+    height: 85px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 60px;
+    padding: 0 80px;
     position: relative;
-    clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+    clip-path: polygon(3% 0%, 97% 0%, 100% 50%, 97% 100%, 3% 100%, 0% 50%);
     border: 1px solid var(--deck-gold);
+}
+
+/* Internal Hull Line (The double line ship feeling) */
+.boat-nav::after {
+    content: '';
+    position: absolute;
+    top: 6px; left: 10px; right: 10px; bottom: 6px;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    pointer-events: none;
+    clip-path: polygon(3% 0%, 97% 0%, 100% 50%, 97% 100%, 3% 100%, 0% 50%);
+}
+
+.nav-links { 
+    display: flex !important; /* Forces horizontal alignment */
+    flex-direction: row !important;
+    list-style: none; 
+    gap: 40px; 
+    align-items: center; 
 }
 
 .nav-links a {
     color: var(--water-white);
     text-decoration: none;
-    font-size: 12px;
+    font-size: 13px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    font-weight: 300;
 }
 
-/* --- HERO TEXT POP --- */
+.quote-link {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    border: 1px solid var(--deck-gold);
+    padding: 10px 25px !important;
+    color: var(--deck-gold) !important;
+}
+
+/* --- HERO TEXT AND ANIMATION --- */
 .hero-bg {
-    height: 90vh; /* Increased height */
-    background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.8)), 
-                url('https://get.pxhere.com/photo/sea-coast-ocean-dock-sky-ship-transport-vessel-vehicle-port-industry-freight-cargo-ship-waterway-infrastructure-cargo-commercial-cranes-shipping-vessel-logistics-container-terminal-freight-transport-557146.jpg');
+    height: 95vh;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -94,19 +82,42 @@ header {
 }
 
 .hero-content {
-    animation: boatArrival 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: boatArrival 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes boatArrival {
-    0% { transform: translateX(-100px); opacity: 0; }
+    0% { transform: translateX(-150px); opacity: 0; }
     100% { transform: translateX(0); opacity: 1; }
 }
 
-/* --- CARDS --- */
-.info-card {
-    background: white;
-    border-top: 5px solid var(--deck-gold);
-    padding: 40px;
-    border-radius: 4px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+/* --- CONTACT TOP BAR --- */
+.top-contact-bar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 45px;
+    background: rgba(15, 23, 42, 0.5);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    z-index: 1001;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--water-white);
+}
+
+/* --- POINTER CURSOR --- */
+#cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: var(--deck-gold);
+    border: 2px solid var(--hull-dark);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
 }
